@@ -5,4 +5,12 @@ Malka Guillot
 
 [Course syllabus](https://docs.google.com/document/d/1eviJuOoWUjoonxS1LvQJi1kMbmkNUulJtZ31542w100/edit?usp=sharing)
 
+[Signing sheet](https://malkipp.github.io/big_data_policy_2021/slides/students-presentations.md) for students presentation
+
 Week 1: [slides](https://malkipp.github.io/big_data_policy_2021/slides/w1_intro.html)
+
+Week 2: [slides](https://malkipp.github.io/big_data_policy_2021/slides/w2.html)
+
+Week 3: [slides](https://malkipp.github.io/big_data_policy_2021/slides/w3.html)
+
+Week 4: [slides](https://malkipp.github.io/big_data_policy_2021/slides/w4.html)
