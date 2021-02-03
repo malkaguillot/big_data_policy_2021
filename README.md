@@ -7,7 +7,7 @@ Malka Guillot
 
 [Signing sheet](https://github.com/MalkIPP/big_data_policy_2021/blob/main/students-presentations.md) for students presentation
 
-Notebooks on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MalkIPP/big_data_policy_2021/master)
+Notebooks on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MalkIPP/big_data_policy_2021/main)
 
 Week 1: [slides](https://malkipp.github.io/big_data_policy_2021/slides/w1_intro.html)
 
