@@ -4,7 +4,7 @@
 Lecture materials for the ETHZ course
 '860-0033-00L Big Data for Public Policy FS2021' (cf.[Course syllabus](https://docs.google.com/document/d/1eviJuOoWUjoonxS1LvQJi1kMbmkNUulJtZ31542w100/edit?usp=sharing))
 
-[Signing sheet](https://malkipp.github.io/big_data_policy_2021/slides/students-presentations.md) for students presentation
+[Signing sheet](https://malkipp.github.io/big_data_policy_2021/students-presentations) for students presentation
 
 Notebooks on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MalkIPP/big_data_policy_2021/main)
 
