@@ -10,10 +10,10 @@ Students not presenting should prepare questions on one of the two papers.
 
 #### Presentation
 The presentation should be using slides and last **15 minutes**.
-Please submitted your presentation the [Moodle](https://moodle-app2.let.ethz.ch/mod/assign/view.php?id=554940) of the class: one submission by group, but do not forget to indicate both names on the first slide.
+Please submitted your presentation the [Moodle](https://moodle-app2.let.ethz.ch/course/view.php?id=14461) of the class: one submission by group, but do not forget to indicate both names on the first slide.
 
 #### Report
-The report should be done alone. It should be 2 pages long at most and submitted to the Moodle of the class on the morning of the article is discussed in class.
+The report should be done alone. It should be 2 pages long at most and submitted to the [Moodle](https://moodle-app2.let.ethz.ch/course/view.php?id=14461) of the class on the morning of the article is discussed in class.
 
 ### Content
 
