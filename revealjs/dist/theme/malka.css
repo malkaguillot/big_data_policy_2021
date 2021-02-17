@@ -13,7 +13,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --background-color: #111;
+  --background-color: #142328;
   --main-font: "Fira Sans";;
   --main-font-size: 38px;
   --main-color: #eee;
@@ -44,12 +44,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 .reveal-viewport {
-  background: #111;
-  background-color: #111; }
+  background: #142328;
+  background-color: #142328; }
 
 .reveal {
   font-family: "Fira Sans";
-  font-size: 40px;
+  font-size: 30px;
   font-weight: normal;
   color: #eee; }
 
@@ -90,15 +90,20 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
   .reveal h1 {
       font-size: 1.77em;
-      text-align: center}
+      text-align: center;
+    }
 
   .reveal h2 {
       font-size: 1.30em;
-      text-align: center;}
+      text-align: center;
+      color: #8ee593;
+    }
 
   .reveal h3 {
-      font-size: .95em;
-      text-align: center;}
+      font-size: 1.2em;
+      text-align: center;
+      color: #8ee593;
+    }
 
   .reveal h4 {
       font-size: .75em;
@@ -165,6 +170,19 @@ section.has-light-background, section.has-light-background h1, section.has-light
 
 .reveal em {
   font-style: italic; }
+
+.reveal bcolor {
+  font-weight: bold;
+  color: #8ee593;
+}
+
+.reveal cite {
+  height: 100%;
+  margin: 0 ;
+  display: inline-block;
+  width :   100%;
+  font-size: .6em;
+}
 
 .reveal ol,
 .reveal dl,
@@ -370,6 +388,19 @@ section.has-light-background, section.has-light-background h1, section.has-light
         height: 200px;
         transform: rotate(180deg);
       }
+
+      /* footnote
+      <div class='footer'>
+      Use left and right arrows to navigate
+      </div>
+      */
+      .reveal .footer {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        font-size: 0.5em;
+      }
+
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
@@ -388,4 +419,4 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 @media print {
   .backgrounds {
-    background-color: #111; } }
+    background-color: #142328; } }
