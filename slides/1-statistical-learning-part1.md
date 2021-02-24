@@ -8,7 +8,7 @@
 <!-- .slide:  id="toc" class: left, inverse -->
 ## Table of contents
 
-3. [What is statistical learning?](#)
+1. [What is statistical learning?](#)
 
 3. [Inference vs. predictions](#)
 
@@ -39,8 +39,13 @@ Notes: my notes
 # What is statistical learning?
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
 
+
+<i class="fa fa-book fa-fw" aria-hidden="true"></i> [JWHT](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/601cc86d7f828c4792e0bcae/1612499080032/ISLR+Seventh+Printing.pdf) chap 1. & 2.1
+
+
 note:
 https://raw.githubusercontent.com/ljanastas/Princeton_WWS586A-Machine-Learning-Policy-Analysis/master/Lectures/Stat_Learning/WWS586a-02-21-18.pdf
+https://teaching.parisschoolofeconomics.eu/docs/SHAREDmachinelearning/Part1.pdf
 
 --
 
@@ -64,43 +69,75 @@ https://raw.githubusercontent.com/ljanastas/Princeton_WWS586A-Machine-Learning-P
 
 --
 
-## Statistical learning theory
+## Statistical model
 
 Concretely, finding $f(.)$ s.t. `$$ Y=f(X)+\epsilon$$`
 
   - $f(X)$ is an unknown function of a matrix of predictors $X= (X_1,···,X_p)$,
-  - an outcome $Y$
+  - $Y$: a scalar outcome variable
   - an error term $\epsilon$ with mean zero.
   - While $X$ and $Y$ are known, $f(·)$ is unknown.
 
 <bcolor>Goal of statistical learning</bcolor>: to utilize a set of approaches to estimate the “best” $f(·)$ for the problem at hand.
 
+--
+
+### Example: income as a function of education
+
+<div class="r-stack"><img data-src="images/jwht-fig2-2.png" style="height: 400px;" > </div>
+
+Notes:
+- The **red dots** are the *observed values* of income and years of education for 30 individuals.
+- The **blue curve** represents the *true underlying relationship* between in come and years of education, which is generally unknown (but is known in this case because the data were simulated).
+- The **black lines** represent the *error* associated with each observation. Overall, these errors have approximately mean zero.
 
 ---
 
-# Inference vs. prediction
+# Why estimate $f(X)$?
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+--
+
+## Prediction
+
+- Predict $Y$ by $\hat Y =\hat f (X)$
+- When do we care about "pure prediction"?
+  - $X$ readily available but $Y$ is not
+- $\hat f$ can be a **block box**:
+  - the only concern is accuracy of the prediction
+
+Notes:
+- $\hat f = $ our estimate for $f$
+- $\hat Y$ =resulting prediction for $Y$
+
+--
+
+## Inference
+
+- Understanding the way that $Y$ is affected as $X_1,...,X_p$ change
+  - Which predictors are associated with the response?
+  - What is the relationship between the response and each predictor?
+
+$\Rightarrow \hat f$ is cannot be a **black box** anymore
+
+Notes:
+
+Add a question: using examples, identify whether the questions relate to prediction or inference paradigm
 
 --
 
 ## Approach in social science
 
-Objective:
-- Understanding the way that $Y$ is affected as $X_1,...,X_p$ change
+- Objective: Understanding the way that $Y$ is affected as $X_1,...,X_p$ change
 - The goal not necessarily to make predictions for $Y$
+- Often linear function to estimate $Y$: $ f(X)=\sum_{i=1}^p \beta_i x_i$
+- Assume  $ \epsilon \sim  N(0, \sigma^2)$
+- Parameters $\beta$ are estimated by minimizing the sum of squared errors
 
+$$ Y= \sum_{i=1}^p \beta_i x_i + \epsilon $$
 
---
-
-## Statistical learning theory
-
-
-- Social science:
-  - often choose a linear function to estimate $Y$ $ f(X)=\sum_{i=1}^p \beta_i x_i$
-  - assume that the error term is normally distributed with a zero mean : $ \epsilon \sim  N(0, \sigma^2)$
-  - Parameters $\beta$ are estimated by minimizing the sum of squared errors
-
-  $$ Y= \sum_{i=1}^p \beta_i x_i + \epsilon $$
+Notes:
+Assume that the error term is normally distributed with a zero mean :
 
 --
 
@@ -128,7 +165,7 @@ $\rightarrow$ can be achieved through randomization of $T$
 $$ \hat Y = \hat f(X) $$
 - Objectives:
   - find the “best” $f(·)$ and the “best” set of $X$’s which give the best predictions,$\hat Y$
-  - find the function that <bcolor>minimize the difference between the predicted values and the observed values</bcolor>
+  - **Accuracy**: find the function that <bcolor>minimize the difference between *predicted* and *observed* values</bcolor>
 
 Note:  Machine learning is primarily concerned with prediction
 
@@ -140,35 +177,148 @@ $\hat f(X)=\hat Y$ estimated function
 
 $f(X)+\epsilon =\hat Y$ true function
 
-- Reducible error: $\hat f$ is used to estimate f, but not perfect
+- <bcolor>Reducible error</bcolor>: $\hat f$ is used to estimate f, but not perfect
   $\rightarrow$ accuracy can be improved by adding more features
-- Irreducible error: $\epsilon$ = all other features that can be used to predict $f$ $\rightarrow$ unobserved $\rightarrow$ irreducible
+- <bcolor>Irreducible error</bcolor>: $\epsilon$ = all other features that can be used to predict $f$ $\rightarrow$ unobserved $\rightarrow$ irreducible
 
 --
 
 ## Reducible and irreducible error
-$E(Y_\hat Y)^2 = E[f(X)+\epsilon - \hat f (X)]^2$
+$$\begin{align}
+E(Y-\hat Y)^2 &= E[f(X)+\epsilon - \hat f (X)]^2 \\\\
+      &= \underbrace{[f(X) - \hat f(X)]^2}_{Reducible} +  \overbrace{Var(\epsilon)}^{Irreducible} \\
+\end{align}$$
 
+$\Rightarrow$ **Objective**: estimating $f$ with the aim of minimizing the reducible error
+
+Notes:
+where $E(Y−\hat Y)^2$ represents the average, or expected value, of the squared expected value difference between the predicted and actual value of $Y$,and $Var(\epsilon)$ represents the variance associated with the error term.
+
+We focus on estimating $f$ with the aim of minimizing the reducible error.
+The irreducible error will always provide an upper bound on the accuracy of our prediction for $Y$. This bound is almost always unknown in practice.
 
 ---
 
-## Estimating $f$
+## How do we estimate $f$?
 
 --
 
-## Assessing model accuracy
+## Context
+We use observations to "teach" our ML algorithm to predict outcomes
+
+- <bcolor>Training data</bcolor>: $ \\{ (x_1,y_1), (x_2,y_2), \dots, (x_n,y_n)\\} $
+where $x_i=(x_{i1}, x_{i2}, \dots, x_{ip})^T$
+- Goal: use the training data to estimate the unknown function $f$
+- 2 types of SL methods: <bcolor>parameteric vs. nonparametric</bcolor>
+
+--
+
+### Parametric methods
+**Model-based approaches**, 2 steps:
+
+1. Specify a <bcolor>*parametric* (functional) form</bcolor> for $f(X)$, e.g. linear:
+   $$ f(X) = \beta_0+\beta_1X_1+\cdots+\beta_pX_p$$
+   (Parametric means that the function depends on a finitenumber of parameters, here $p+1$).
+
+2. <bcolor>Training</bcolor>: Estimate the parameters by OLS and predict $Y$ by
+   $$ \hat Y = \hat f(X)=\hat \beta_0+\hat \beta_1X_1+\cdots+\hat \beta_pX_p$$
+
+Notes:
+ - Parametric methods involve a two-step model-based approach.
+ 1. make an assumption about the functional form
+ 2. use the training data to fit or train the model
+ $\Rightarrow$ reduces the problem of estimating $f$ down to one of estimating a set of parameters
+
+--
+
+### True function
+
+<div class="r-stack"><img data-src="images/jwht-fig2-3.png" style="height: 400px;" > </div>
+
+Notes:
+The plot displays income as a function of years of education and seniority.
+- The **blue surface** represents the true underlying relationship between income and years of education and seniority, which is known since the data are simulated.
+- The **red dots** indicate the observed values of these quantities for30individuals
+
+--
+
+### Linear estimate
+
+<div class="r-stack"><img data-src="images/jwht-fig2-4.png" style="height: 400px;" > </div>
+
+Notes:
+the true $f$ has some curvature that is not captured in the linear fit
+
+--
+
+### Parametric methods -- issues
+Misspecification of $f(X)$
+
+1. Rigid models (e.g. strictly linear) may not fit the data well
+2. More flexible models require more parameter estimation $\rightarrow$ **overfitting**
+
+Note:
+
+
+--
+
+### Non-parametric methods
+- **No assumptions** about the functional form of $f$
+
+- Estimates a function only **based on the data itself**.
+
+- **Disadvantage**: very large number of observations is required to obtain an accurate estimate of $f$
+
+--
+
+### “Smooth” nonlinear estimate
+
+<div class="r-stack"><img data-src="images/jwht-fig2-5.png" style="height: 400px;" > </div>
+
+Notes:
+The approach attempts to produce an estimate for $f$ that is as close as possible to the observed data, subject to the fit being smooth
+
+--
+
+### Rough nonlinear estimate with perfect fit $\Rightarrow$ overfit
+
+<div class="r-stack"><img data-src="images/jwht-fig2-6.png" style="height: 400px;" > </div>
+
+Notes:
+But if we allow for a rougher fit, =>  zero errors on the training data.
+= Example of OVERFITTING
+
+--
+
+## Accuracy and interpretability tradeoffs
+
+- <bcolor>More accurate</bcolor> models often require estimating <bcolor>more parameters</bcolor> and/or having more flexible models
+
+- Models that are better at prediction generally are <bcolor>less interpretable</bcolor>.
+
+- For inference, we care about interpretability.
+
+$\rightarrow$ More on this next week!
+
+--
+
+## Supervised vs. unsupervised learning
+- <bcolor>Supervised learning</bcolor> involves estimating functions with known observation and outcome data.
+
+- <bcolor>Unsupervised learning</bcolor> involves estimating functions without the aid of outcome data.
+  -
+
+--
+
+## The Machine learning landscape
+<img data-src="images/machine_learning_landscape.jpeg"  style="height: 550px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
 
 
 ---
 
 <!-- .slide: id="getting_started"  -->
-# Econometrics vs. Machine Learning
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
-
----
-
-<!-- .slide: id="getting_started"  -->
-# Econometrics vs. Machine Learning
+# Conclusion:
+## Econometrics vs. Machine Learning
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
 
 --
@@ -192,16 +342,6 @@ $E(Y_\hat Y)^2 = E[f(X)+\epsilon - \hat f (X)]^2$
 
 - **Machine learning**: <span style="color:blue">humans</span> input the <span style="color:blue">data</span> and the <span style="color:blue">answer</span>, and the <span style="color:green">computer</span>  learns the <span style="color:green">rules</span>.
 
---
-
-## The Machine learning landscape
-<img data-src="images/machine_learning_landscape.jpeg"  style="height: 550px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
-
---
-
-## Model-based vs. algorithmic approaches
-
-
 
 --
 
@@ -218,10 +358,3 @@ $E(Y_\hat Y)^2 = E[f(X)+\epsilon - \hat f (X)]^2$
   - <!-- .element: class="fragment" data-fragment-index="5" -->  You are welcome to propose relevant papers
 - <!-- .element: class="fragment" data-fragment-index="6" -->
   All aim at *using data to solve problems*
-
----
-
-<!-- .slide: id="hw"-->
-## For next week
-
-- Homework

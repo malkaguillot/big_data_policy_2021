@@ -6,12 +6,22 @@
 
 ---
 
+## Zoom rules before we begin
+- Turn on video <i class="fas fa-video"></i> and set audio to mute <i class="fas fa-microphone-slash"></i>
+- Set zoom name to “Full Name, School, Dept/Major”(ex: “Leon Smith, ETH Computer Science”)
+- Say “hi” in the chat
+
+
+---
+
 <!-- .slide:  id="toc" class: left, inverse -->
 # Table of contents
 
 1. [Prologue ](#prologue)
 
 2. [Logistics](#logistics)
+
+2. [General motivation](#motivation)
 
 3. [Tools and resources](#tools_resources)
 
@@ -20,6 +30,32 @@
 2. [Epilogue](#hw)
 
 Notes: my notes
+
+
+--
+
+## Ask questions,
+
+
+<div style="position:relative;  text-align: center;" >
+  <a href="https://app.sli.do/event/tevwuniu" target="_blank">
+    <div style="position:absolute;  z-index:500;height:245px;width:100%;"></div>
+    <iframe src="https://wall.sli.do/event/tevwuniu?section=988c7141-97eb-401d-b938-cf64c648ccf3" width="600" height="500" scrolling="yes"></iframe>
+  </a>
+
+  https://app.sli.do/event/tevwuniu
+</div>
+
+--
+
+## What do you want to learn during the class?
+
+<div style="position:relative;  text-align: center;" >
+  <a href="https://app.sli.do/event/tevwuniu" target="_blank">
+    <div style="position:absolute;  z-index:500;height:245px;width:100%;"></div>
+    <iframe src="https://app.sli.do/event/tevwuniu/embed/polls/ca69a483-8aa8-4747-adeb-81cdd066ba16" width="400" height="400"></iframe>
+  </a>
+</div>
 
 ---
 
@@ -104,23 +140,193 @@ For each window (19:00–19:15, 19:15–19:30 and 19:30–19:45), we compute the
   - Computer science. We’re not coding up models from scratch.
   - Mathematical statistics. We’re not deriving the functions by hand.
 
----
+--
 
-<!-- .slide: id="motivation"  -->
-  # Motivations
-  <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+<!-- .slide: id=""-->
+## Who am I?
+
+  <div class="image-float">
+    <p style="position: relative; right: 0px; top: 10;">
+        <a href="images/malka_small.jpg"><img src="images/malka_small.jpg" height="200px"/></a></p>
+        <a href="image2.jpg"><img src="" height="100px"/></a></p>
+   <p class="fragment" data-fragment-index="4" style="position:absolute; left:40px; top:40px;">
+     </div>
+  <div class="content-aside">
+   <p class="fragment fade-down" data-fragment-index="1">
+    PhD in economics from the Paris School of Economics </p>
+   <p class="fragment" data-fragment-index="2">
+    Postdoc at ETH </p>
+   <p class="fragment" data-fragment-index="3">
+    Interested in <bcolor>public economics</bcolor> questions:
+    <a href="https://cepr.org/active/publications/discussion_papers/dp.php?dpno=15415/">inequality</a> and
+    <a href="https://payroll-tax-inequality-app.herokuapp.com/">taxation</a></p>
+
+
+   <p class="fragment" data-fragment-index="4">
+    Using the standard econometric toolbox + natural language processing + machine learning </p>
+ </div>
+
+ <a href="https://malkaguillot.weebly.com/"><i class="fas fa-globe" ></i></a>
+ <a href="https://twitter.com/MalkaGuillot/"><i class="fab fa-twitter" ></i></a>
 
 --
 
-## Motivations
-- We are seeing a revolution in policy analysis...
-  - <bcolor> new datasets</bcolor> : administrative microdata, digitization of text archives, social media
-  - <bcolor> new methods</bcolor> : causal inference, natural language processing, machine learning
+## Who are you? Results from pre-class survey
+
+<div style="position:relative;  text-align: center;" >
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=230737814&amp;format=interactive"></iframe>
+</div>
+
+--
+
+## Who are you? Results from pre-class survey
+
+<div style="position:relative;  text-align: center;" >
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=842812745&amp;format=interactive"></iframe>
+</div>
+
+--
+
+## Who are you? Results from pre-class survey
+
+<div style="position:relative;  text-align: center;" >
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=1504469569&amp;format=interactive"></iframe>
+</div>
+
+
+--
+
+## Who are you? Results from pre-class survey
+
+<div class="r-stack"><img data-src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=1130202245&format=image
+" style="height: 400px;" > </div>
+
+---
+
+<!-- .slide: id="logistics"  -->
+# Logistics
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+--
+
+## How does the class work?
+
+- <!-- .element: class="fragment" -->
+  <bcolor> Lectures</bcolor>: 2 hours / week  
+  - 1 hour theory
+  - 1 hour interactive:
+    - coding exercise
+    - 2 * (15 min students presentations + 10 min of class discussion)
+- <!-- .element: class="fragment" -->
+  <bcolor>Every week</bcolor>
+  - Thursdays	12:15-14 (with a 10 minute break 13-13:10)
+  - On zoom: [link](https://ethz.zoom.us/j/92433296893?pwd=a0tsSHkzU2ZhNnpiN1YxWno2MnZhdz09)
+  - In person? [ML F 39](http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=ML&geschoss=F&raumNr=39&lang=en)
+  - Dates: 25.02.; 04.03.; 11.03.; 18.03.; 25.03.; 01.04.; 15.04.; 22.04.; 29.04.; 06.05.; 20.05.; 27.05.; 03.06.
+
+--
+
+## Online Course Materials
+- [Moodle]([Moodle](https://moodle-app2.let.ethz.ch/course/view.php?id=14461) ):
+  - Course announcement and forum
+  - Giving back homerwork
+- <!-- .element: class="fragment" data-fragment-index="2" -->
+   [Syllabus](https://docs.google.com/document/d/1eviJuOoWUjoonxS1LvQJi1kMbmkNUulJtZ31542w100)
+-   <!-- .element: class="fragment" -->
+  [Github folder](https://github.com/MalkIPP/big_data_policy_2020) or [Github page](https://malkipp.github.io/big_data_policy_2021/)
+  - <!-- .element: class="fragment" -->
+      <bcolor>Slides</bcolor>: in html, also available in PDF
+      - relying on [RevealJS](https://revealjs.com/)
+  -   <!-- .element: class="fragment" -->
+      <bcolor>Coding sessions</bcolor>: in [Jupyter Notebook](https://jupyter.org/)
+      - You can use [mybinder](https://mybinder.org/) in the beginning
+
+--
+
+## Approximative Evaluation Policy
+
+- **Weekly homework**: should be given back as [jupyter notebooks](https://jupyter.org/) in PDF format.
+  - $4(hw) *10\textrm{ pts} + 2(hw) * 5 \textrm{ pts} -10 $ <bcolor>
+      =40%</bcolor>
+- **Reading** <bcolor>=30%</bcolor>:
+  - 1 presentation (2 students) `=30%`
+  - Essay on a paper (1 student) `= 30%`
+-  **Participation in class & presentations** <bcolor>=5 bonus%</bcolor>:
+
+- Final assignment <bcolor>=30%</bcolor>
+- <bcolor>[Alternatively] </bcolor>Course project $\rightarrow$ Contact me if interested
+
+--
+
+## Course Communication
+
+- Course communication will be done through [eDoz]()
+- I will be available
+  - in the zoom 5 minutes early, during the mid-lecture break and after the end of lectures.
+  - for 1:1 meetings after the class, just book a 15 minutes slot [here](https://calendly.com/malkaguillot/1-1-meeting-eth-class).
+
+--
+
+## Online Lecture Norms
+
+- Keep video on <bcolor>camera on</bcolor> <i class="fas fa-video"></i> [if connection allows]
+  - At the beginning/end, when asking questions
+  - When discussing papers / coding
+- <bcolor>Visual feedback</bcolor> <i class="fas fa-grin"></i> <i class="fas fa-grin-wink"></i>  <i class="fas fa-grin-stars"></i> helps
+- Stay muted when not talking
+- To make <bcolor>questions or comments</bcolor>:
+  - In the chat
+  - use the“raise hand” function + <i class="fas fa-microphone"></i>
+
+$\rightarrow$ Your <bcolor>participation and collaboration</bcolor> is key for making this a great experience for everyone!
+
+Note:
+Let’s make the most of online learning!
+
+--
+
+## Teaching Assistants
+
+[Matteo Pinna](https://lawecon.ethz.ch/group/scientific-team/pinna.html) (matteo.pinna@gess.ethz.ch)
+
+[Leo Picard](https://leopicard.net/) (leo.picard@gess.ethz.ch)
+
+Can answer questions about lectures, notebooks, assignments, and projects
+
+--
+
+## How to reach me?
+
+- **Personal question**: face-to-face interaction > emails
+- **General interest question**: forum > email
+
+<i class="fa fa-send" aria-hidden="true"></i>
+[malka.guillot@gess.ethz.ch](malka.guillot@gess.ethz.ch)
+
+
+<i class="fa fa-location-arrow" aria-hidden="true"></i>
+IFW E 44 (Haldeneggsteig 4) <br>
+8092 Zürich
+
+---
+
+<!-- .slide: id="motivation"  -->
+# General motivation
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+--
+
+## Revolution in policy analysis
+- <bcolor> new datasets</bcolor> : administrative microdata, digitization of text archives, social media
+- <bcolor> new methods</bcolor> : causal inference, natural language processing, machine learning
 
 
 ... which contribute to tackle forecasting and public policy evaluation with a new angle <!-- .element: class="fragment" -->
 
-New possibilities: exciting! <!-- .element: class="fragment" -->
+[New possibilities: exciting!]() <!-- .element: class="fragment" -->
+
+Notes:
+We are seeing a revolution in policy analysis
 
 --
 
@@ -183,7 +389,7 @@ $\rightarrow$ Use programming and statistics to extract value
 ### New tools and methods
 
 - **Data collection**: API, Webscraping
-- **Analysis**: text analysis, machine Learning
+- **Analysis**: text analysis, machine learning
   - Data can be tall (many observations) or **wide/fat** (many regressors)
   $\Rightarrow$ Machine learning helps to extract the relevant information
 
@@ -259,121 +465,6 @@ Policy maker facing a drought must decide whether to:
 
 <!-- .element: class="fragment" -->
 
-
---
-
-<!-- .slide: id=""-->
-## Who am I?
-
-  <div class="image-float">
-    <p style="position: relative; right: 0px; top: 10;">
-        <a href="images/malka_small.jpg"><img src="images/malka_small.jpg" height="200px"/></a></p>
-        <a href="image2.jpg"><img src="" height="100px"/></a></p>
-   <p class="fragment" data-fragment-index="4" style="position:absolute; left:40px; top:40px;">
-     </div>
-  <div class="content-aside">
-   <p class="fragment fade-down" data-fragment-index="1">
-    PhD in economics from the Paris School of Economics </p>
-   <p class="fragment" data-fragment-index="2">
-    Postdoc at ETH </p>
-   <p class="fragment" data-fragment-index="3">
-    Interested in <bcolor>public economics</bcolor> questions:
-    <a href="https://cepr.org/active/publications/discussion_papers/dp.php?dpno=15415/">inequality</a> and
-    <a href="https://payroll-tax-inequality-app.herokuapp.com/">taxation</a></p>
-
-
-   <p class="fragment" data-fragment-index="4">
-    Using the standard econometric toolbox + natural language processing + machine learning </p>
- </div>
-
-
---
-
-## Who are you?
-
-TODO: results from pre-class survey
-
-
----
-
-<!-- .slide: id="logistics"  -->
-# Logistics
-<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
-
---
-
-## How does the class work?
-
-- <!-- .element: class="fragment" -->
-  <bcolor> Lectures</bcolor>: 2 hours / week  
-  - 1 hour theory
-  - 1 hour interactive:
-    - coding exercise
-    - 2 * (15 min students presentations + 10 min of class discussion)
-- <!-- .element: class="fragment" -->
-  <bcolor>Every week</bcolor>
-  - Thursdays	12:15-14 (with a 10 minute break 13-13:10)
-  - On zoom: [link](https://ethz.zoom.us/j/92433296893?pwd=a0tsSHkzU2ZhNnpiN1YxWno2MnZhdz09)
-  - In person? [ML F 39](http://www.rauminfo.ethz.ch/Rauminfo/grundrissplan.gif?gebaeude=ML&geschoss=F&raumNr=39&lang=en)
-  - Dates: 25.02.; 04.03.; 11.03.; 18.03.; 25.03.; 01.04.; 15.04.; 22.04.; 29.04.; 06.05.; 20.05.; 27.05.; 03.06.
-
---
-
-## Online Course Materials
-- Moodle: <!-- .element: class="fragment" data-fragment-index="1" -->
-  - Course announcement and forum
-  - Giving back homerwork
-- <!-- .element: class="fragment" data-fragment-index="2" -->
-   [Syllabus](https://docs.google.com/document/d/1eviJuOoWUjoonxS1LvQJi1kMbmkNUulJtZ31542w100)
--   <!-- .element: class="fragment" -->
-  [Github folder](https://github.com/MalkIPP/big_data_policy_2020) or [Github page](https://malkipp.github.io/big_data_policy_2021/)
-  - <!-- .element: class="fragment" -->
-      <bcolor>Slides</bcolor>: in html, also available in PDF
-      - relying on [RevealJS](https://revealjs.com/)
-  -   <!-- .element: class="fragment" -->
-      <bcolor>Coding sessions</bcolor>: in [Jupyter Notebook](https://jupyter.org/)
-      - You can use [mybinder](https://mybinder.org/) in the beginning
-
---
-
-## Evaluation
-
-- **Weekly homework**: should be given back as [jupyter notebooks](https://jupyter.org/) in PDF format.
-  - $4(hw) *10\textrm{ pts} + 2(hw) * 5 \textrm{ pts} -10 $ <bcolor>
-      =40%</bcolor>
-- **Reading** <bcolor>=30%</bcolor>:
-  - 1 presentation (2 students) `=30%`
-  - Essay on a paper (1 student) `= 30%`
-
-- Final assignment <bcolor>=30%</bcolor>
-- <bcolor>[Alternatively] </bcolor>Course project $\rightarrow$ Contact me if interested
-
---
-
-## Course Communication
-
-- Course communication will be done through [eDoz]()
-- I will be available
-  - in the zoom 5 minutes early, during the mid-lecture break and after the end of lectures.
-  - for 1:1 meetings after the class, just book a 15 minutes slot [here](https://calendly.com/malkaguillot/1-1-meeting-eth-class).
-
---
-
-## How to reach me?
-
-- **Personal question**: face-to-face interaction > emails
-- **General interest question**: forum > email
-
-<i class="fa fa-send" aria-hidden="true"></i>
-[malka.guillot@gess.ethz.ch](malka.guillot@gess.ethz.ch)
-
-
-<i class="fa fa-location-arrow" aria-hidden="true"></i>
-IFW E 44 (Haldeneggsteig 4) <br>
-8092 Zürich
-
-
-
 ---
 
 <!-- .slide: id="tools_resources" -->
@@ -381,6 +472,20 @@ IFW E 44 (Haldeneggsteig 4) <br>
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
 
 --
+
+## Your programming background
+
+<div style="position:relative;  text-align: center;" >
+  <a href="https://app.sli.do/event/tevwuniu" target="_blank">
+    <div style="position:absolute;  z-index:500;height:245px;width:100%;"></div>
+    <iframe src="https://app.sli.do/event/tevwuniu/embed/polls/1bb3f5ad-829d-486c-8be3-17c642e0f2af" width="300" height="400"></iframe>
+  </a>
+
+  https://app.sli.do/event/tevwuniu
+</div>
+
+--
+
 
 ## Why Python?
 
@@ -425,7 +530,6 @@ Notes:
 See downlowding instruction and small video
 
 --
-
 
 ## Course materials are on [Github](https://github.com/MalkIPP/big_data_policy_2021)
 
@@ -553,7 +657,7 @@ Gaillac and L’Hour, [ Machine Learning for Econometrics](https://drive.google.
 
 ## Organizing the readings
 
-  - [Take a slot](https://github.com/MalkIPP/big_data_policy_2021/blob/main/students-presentations.md) for a <bcolor> paper presentation</bcolor> by:
-    - Modifying the `raw` version of the signing sheet on github [can be done directly on the platform]
-    - This works as a small exercise on github!
+  - [Take a slot](https://docs.google.com/spreadsheets/d/1e4dDQDuJbImoBO9dWjGkpDOwDiZBpd2fddcO3PZb9IQ/edit?usp=sharing) for a <bcolor> paper presentation</bcolor> by:
+    - By group of 2
+    - Indicate 1st, 2nd and 3rd choice for a presentation
     - You can contact me (*and are encourage to*) if you want to present a paper that is not on the list

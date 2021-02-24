@@ -14,6 +14,10 @@
 		<link rel="stylesheet" href="../revealjs/dist/reveal.css">
 		<link rel="stylesheet" href="../revealjs/dist/theme/malka.css" id="theme">
 
+		<!-- Printing command:
+		revealjs/node_modules/decktape/decktape.js automatic http://127.0.0.1:3000/slides/0_overview.html	/slides/0_overview.pdf
+		-->
+
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="../revealjs/plugin/highlight/monokai.css" id="highlight-theme">
 	</head>
@@ -38,6 +42,7 @@
 		<script src="../revealjs/plugin/highlight/highlight.js"></script>
 		<script src="../revealjs/plugin/math/math.js"></script>
 		<script src="../revealjs/plugin/chalkboard/plugin.js"></script>
+		<script src="../revealjs/plugin/pdfexport/pdfexport.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -80,8 +85,39 @@
 
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ,RevealMenu, RevealMath],
-				autoAnimateStyles: [
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath, RevealMenu, RevealChalkboard,PdfExport ],
+				chalkboard: {
+					boardmarkerWidth: 3,
+					chalkWidth: 7,
+					chalkEffect: 1.0,
+					src: null,
+					readOnly: undefined,
+					toggleChalkboardButton: { left: "110px", bottom: "30px", top: "auto", right: "auto" },
+					toggleNotesButton: { left: "75px", bottom: "30px", top: "auto", right: "auto" },
+					transition: 800,
+					theme: "chalkboard",
+					background: [ 'rgba(127,127,127,.1)' , path + 'img/blackboard.png' ],
+					grid: { color: 'rgb(50,50,10,0.5)', distance: 80, width: 2},
+					eraser: { src: path + 'img/sponge.png', radius: 20},
+					boardmarkers : [
+						{ color: 'rgba(30,144,255, 1)', cursor: 'url(' + path + 'img/boardmarker-blue.png), auto'},
+						{ color: 'rgba(255,140,0,1)', cursor: 'url(' + path + 'img/boardmarker-orange.png), auto'},									{ color: 'rgba(100,100,100,1)', cursor: 'url(' + path + 'img/boardmarker-black.png), auto'},
+						{ color: 'rgba(220,20,60,1)', cursor: 'url(' + path + 'img/boardmarker-red.png), auto'},
+						{ color: 'rgba(50,205,50,1)', cursor: 'url(' + path + 'img/boardmarker-green.png), auto'},
+						{ color: 'rgba(150,0,20150,1)', cursor: 'url(' + path + 'img/boardmarker-purple.png), auto'},
+						{ color: 'rgba(255,220,0,1)', cursor: 'url(' + path + 'img/boardmarker-yellow.png), auto'}
+		],
+		chalks: [
+						{ color: 'rgba(220, 133, 41, 0.5)', cursor: 'url(' + path + 'img/chalk-orange.png), auto'},
+						{ color: 'rgba(255,255,255,0.5)', cursor: 'url(' + path + 'img/chalk-white.png), auto'},
+						{ color: 'rgba(96, 154, 244, 0.5)', cursor: 'url(' + path + 'img/chalk-blue.png), auto'},
+						{ color: 'rgba(237, 20, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-red.png), auto'},
+						{ color: 'rgba(20, 237, 28, 0.5)', cursor: 'url(' + path + 'img/chalk-green.png), auto'},
+						{ color: 'rgba(220,0,220,0.5)', cursor: 'url(' + path + 'img/chalk-purple.png), auto'},
+						{ color: 'rgba(255,220,0,0.5)', cursor: 'url(' + path + 'img/chalk-yellow.png), auto'}
+					]
+			},
+							autoAnimateStyles: [
 					'opacity',
 					'color',
 					'background-color',
