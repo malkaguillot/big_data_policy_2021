@@ -34,7 +34,7 @@ Notes: my notes
 
 --
 
-## Ask questions,
+## More interaction using
 
 
 <div style="position:relative;  text-align: center;" >
@@ -174,7 +174,7 @@ For each window (19:00–19:15, 19:15–19:30 and 19:30–19:45), we compute the
 ## Who are you? Results from pre-class survey
 
 <div style="position:relative;  text-align: center;" >
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=230737814&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=230737814&amp;format=image"></iframe>
 </div>
 
 --
@@ -182,7 +182,7 @@ For each window (19:00–19:15, 19:15–19:30 and 19:30–19:45), we compute the
 ## Who are you? Results from pre-class survey
 
 <div style="position:relative;  text-align: center;" >
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=842812745&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=842812745&amp;format=image"></iframe>
 </div>
 
 --
@@ -190,9 +190,8 @@ For each window (19:00–19:15, 19:15–19:30 and 19:30–19:45), we compute the
 ## Who are you? Results from pre-class survey
 
 <div style="position:relative;  text-align: center;" >
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=1504469569&amp;format=interactive"></iframe>
+<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRGFhbIXPxREBXDPpZDy_P4rzWMDuSaReFumIyXnyg4V3JBVOboEYzV1GTq7Rf_--lMgHzSdIIxoP0H/pubchart?oid=1504469569&amp;format=image"></iframe>
 </div>
-
 
 --
 
