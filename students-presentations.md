@@ -3,6 +3,7 @@
 Every other lecture, we will **discuss two prescribed papers** (i.e. that I have either allocated or approved ahead of time). Each paper will be presented (15 minutes) by a group of two students and then discussed (10 minutes). The reading task accounts for `30% of the grade= presenting a paper [group of 2] OR writing a report [alone]`. Given the number of students, not everyone can present.
 Students not presenting should prepare questions on one of the two papers.
 
+For presentations, please indicate on the [signing sheet](https://docs.google.com/spreadsheets/d/1e4dDQDuJbImoBO9dWjGkpDOwDiZBpd2fddcO3PZb9IQ/edit?usp=sharing) your 1st, 2nd and 3rd choice, together with your names. Preferences will be aggregated using a complex algorithm. 
 
 ## Presentation and report content and format
 
@@ -12,8 +13,24 @@ Students not presenting should prepare questions on one of the two papers.
 The presentation should be using slides and last **15 minutes**.
 Please submitted your presentation the [Moodle](https://moodle-app2.let.ethz.ch/course/view.php?id=14461) of the class: one submission by group, but do not forget to indicate both names on the first slide.
 
+##### Grading (=30% of total grade)
+- Individual: 
+  - Presentation skill: 5%
+- Group
+  - Quality of the material (slides): 5%
+  - Summary: 5%
+  - Critical assessment: 10%
+  - Suggestion: 5%
+
 #### Report
 The report should be done alone. It should be 2 pages long at most and submitted to the [Moodle](https://moodle-app2.let.ethz.ch/course/view.php?id=14461) of the class on the morning of the article is discussed in class.
+
+##### Grading (=30% of total grade)
+- Quality of the document: 5%
+- Summary: 5%
+- Critical assessment: 10%
+- Suggestion: 5%
+- Class participation to the discussions: 5%
 
 ### Content
 
