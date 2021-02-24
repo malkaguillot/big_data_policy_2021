@@ -290,6 +290,17 @@ But if we allow for a rougher fit, =>  zero errors on the training data.
 
 --
 
+## Recap: parametric vs. non-parametric approaches
+
+<div style="position:relative;  text-align: center;" >
+  <a href="https://app.sli.do/event/tevwuniu" target="_blank">
+    <div style="position:absolute;  z-index:500;height:245px;width:100%;"></div>
+    <iframe src="https://app.sli.do/event/tevwuniu/embed/polls/6285f58c-7406-45fe-a424-cc3ba1fdf010" width="300" height="500"></iframe>
+  </a>
+</div>
+
+--
+
 ## Accuracy and interpretability tradeoffs
 
 - <bcolor>More accurate</bcolor> models often require estimating <bcolor>more parameters</bcolor> and/or having more flexible models
