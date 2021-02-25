@@ -5,47 +5,59 @@
 
 ---
 
+<!-- .slide: id="prologue"  -->
+# Prologue
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+--
+
+## References
+
+- <i class="fa fa-book fa-fw" aria-hidden="true"></i> [JWHT](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/601cc86d7f828c4792e0bcae/1612499080032/ISLR+Seventh+Printing.pdf) chap 1. & 2.1
+-  Kleinberg, Ludwig, Mullainathan, and Obermeyer (2015), ["Prediction Policy Problems."](https://www.aeaweb.org/articles?id=10.1257/aer.p20151023) American Economic Review, 105 (5), pp. 491-95.
+- Mullainathan and Spiess (2017), ["Machine Learning: An Applied Econometric Approach"]((https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.31.2.87)), Journal of Economic Perspectives, 31 (2), pp. 87-106,
+
+--
+
+## Context
+### Today
+- What is statistical learning?
+- Statistics in social science – causality.
+- Statistics in machine learning – prediction.
+- Accuracy v. interpretability.
+
+### Next week
+- Model accuracy.
+- The bias-variance tradeoff.
+- Classification
+
+--
+
 <!-- .slide:  id="toc" class: left, inverse -->
 ## Table of contents
 
-1. [What is statistical learning?](#)
+1. [What is statistical learning?](#what)
 
-3. [Inference vs. predictions](#)
+3. [Why estimate $f(X)$?](#why)
 
-2. [Epilogue](#hw)
+3. [How do we estimate $f(X)$?](#how)
+
+3. [Machine Learning: an overview](#ml)
+
+3. [Conclusion](#conclusion)
 
 Notes: my notes
 
 ---
 
-<!-- .slide: id="prologue"  -->
-## Prologue
-
-### Today
-- What is statistical learning?
-- Statistics in social science – causality.
-- Statistics in machine learning – prediction.
-
-### Next week
-- Estimating $f$.
-- Accuracy v. interpretability.
-- Model accuracy.
-- The bias-variance tradeoff.
-- Classification
-
----
-
-<!-- .slide: id="causality_vs_prediction"  -->
+<!-- .slide: id="what"  -->
 # What is statistical learning?
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
-
-
-<i class="fa fa-book fa-fw" aria-hidden="true"></i> [JWHT](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/601cc86d7f828c4792e0bcae/1612499080032/ISLR+Seventh+Printing.pdf) chap 1. & 2.1
-
 
 note:
 https://raw.githubusercontent.com/ljanastas/Princeton_WWS586A-Machine-Learning-Policy-Analysis/master/Lectures/Stat_Learning/WWS586a-02-21-18.pdf
 https://teaching.parisschoolofeconomics.eu/docs/SHAREDmachinelearning/Part1.pdf
+
 
 --
 
@@ -92,7 +104,7 @@ Notes:
 - The **black lines** represent the *error* associated with each observation. Overall, these errors have approximately mean zero.
 
 ---
-
+<!-- .slide: id="why"  -->
 # Why estimate $f(X)$?
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
 
@@ -157,7 +169,7 @@ $$ Y= \beta_0 + \beta_1 T + \sum_{i=1}^{p-1} \beta_i x_i + \epsilon $$
 $\rightarrow$ can be achieved through randomization of $T$
 
 - This implies that we are not really all that interested in choosing an optimal $f(.)$
-
+- (We want to estimate unbiased coefficients)
 
 --
 
@@ -166,6 +178,7 @@ $$ \hat Y = \hat f(X) $$
 - Objectives:
   - find the “best” $f(·)$ and the “best” set of $X$’s which give the best predictions,$\hat Y$
   - **Accuracy**: find the function that <bcolor>minimize the difference between *predicted* and *observed* values</bcolor>
+  - (We want to minimize prediction error)
 
 Note:  Machine learning is primarily concerned with prediction
 
@@ -199,7 +212,9 @@ The irreducible error will always provide an upper bound on the accuracy of our 
 
 ---
 
-## How do we estimate $f$?
+<!-- .slide: id="how"  -->
+# How do we estimate $f$?
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
 
 --
 
@@ -259,7 +274,6 @@ Misspecification of $f(X)$
 
 Note:
 
-
 --
 
 ### Non-parametric methods
@@ -311,23 +325,62 @@ But if we allow for a rougher fit, =>  zero errors on the training data.
 
 $\rightarrow$ More on this next week!
 
+---
+
+<!-- .slide: id="ml"  -->
+# Machine Learning: overview and examples
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
 --
 
 ## Supervised vs. unsupervised learning
-- <bcolor>Supervised learning</bcolor> involves estimating functions with known observation and outcome data.
+- <bcolor>Supervised learning</bcolor>: estimating functions with known observation and outcome data.
+  - We observe data on $Y$ and $X$ and want to learn the mapping $\hat Y=\hat f(X)$
+  - **Classification** when $\hat Y$ discrete; **regression** when $\hat Y$ continuous
 
-- <bcolor>Unsupervised learning</bcolor> involves estimating functions without the aid of outcome data.
-  -
+- <bcolor>Unsupervised learning</bcolor>: estimating functions without the aid of outcome data.
+  - We only observe $X$ and want to learn something about its structure
+  - Clustering: Partition data into homogeneous groups based on X
+  - Dimensionality reduction (e.g. PCA)
 
 --
 
 ## The Machine learning landscape
 <img data-src="images/machine_learning_landscape.jpeg"  style="height: 550px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
 
+--
+
+## Examples: Studies using ML for p rediction
+<div style="font-size:80%;">
+<ul>
+  <li><a href "https://onlinelibrary.wiley.com/doi/full/10.1111/ecin.12364">Glaeser, Kominers, Luca, and Naik (2016)</a> use images from Google Street View to measure block-level income in New York City and Boston</li>
+  <li><a href "http://science.sciencemag.org/content/353/6301/790"> Jean et al. (2016)</a> train a neural net to predict local economic outcomes from satellite data in African countries</li>
+  <li><a href "https://www.aeaweb.org/articles?id=10.1257/aer.101.3.288"> Chandler, Levitt, and List (2011)</a> predict shootings among high-risk youth so that mentoring interventions can be appropriately targeted</li>
+  <li><a href "https://academic.oup.com/qje/article-abstract/133/1/237/4095198?redirectedFrom=fulltext"> Kleinberg, Lakkaraju, Leskovec, Ludwig, and Mullainathan (2018)</a> predict the crime probability of defendants released from investigative custody to improve judge decisions</li>
+  <li><a href "https://aclanthology.info/pdf/D/D13/D13-1150.pdf"> Kang, Kuznetsova, Luca, and Choi (2013)</a> use restaurant reviews on Yelp.com to predict the outcome of hygiene inspections</li>
+  <li><a href "http://doc.rero.ch/record/308901/files/WP_SES_494.pdf">Huber and Imhof (2018) </a> use machine learning to detect bid-rigging cartels in Switzerland</li>
+  <li><a href "https://homes.cs.washington.edu/~nasmith/papers/kogan+levin+routledge+sagi+smith.naacl09.pdf)">Kogan, Levin, Routledge, Sagi, and Smith (2009) </a> predict volatility of firms from market-risk disclosure texts (annual 10-K forms)</li>
+  </ul>
+</div>
+
+--
+
+## The Machine learning workflow
+
+1. Look at the big picture.
+2. Get the data.
+3. Discover and visualize the data to gain insights.
+4. Prepare the data for Machine Learning algorithms.
+5. Select a model and train it.
+6. Fine-tune your model.
+7. Present your solution.8. Launch, monitor, and maintain your system
+
+<i class="fa fa-book fa-fw" aria-hidden="true"></i>
+Aurelien Geron, *Hands-on machine learning with Scikit-Learn & TensorFlow*, Chapter 2
 
 ---
 
-<!-- .slide: id="getting_started"  -->
+<!-- .slide: id="conclusion"  -->
 # Conclusion:
 ## Econometrics vs. Machine Learning
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
