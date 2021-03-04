@@ -13145,7 +13145,10 @@ div#notebook {
 <li><strong>Durability</strong>. Websites constantly change.</li>
 </ul>
 <h3 id="Points-to-keep-in-mind:">Points to keep in mind:<a class="anchor-link" href="#Points-to-keep-in-mind:">&#182;</a></h3><ul>
-<li>It may or may not be legal</li>
+<li>It may or may not be legal<ul>
+<li>Loop at websites’ terms of service and robots.txt files</li>
+</ul>
+</li>
 <li>Webscraping is tedious and frustrating</li>
 </ul>
 
@@ -13184,7 +13187,7 @@ div#notebook {
 <li>Search if somebody has already faced the same or a similar problem.</li>
 <li>Does the site or service provide an API that you can access directly?</li>
 <li>Is the website only online for a limited time? Do you want an original snapshot as a backup? Is it more convenient to filter your data offline?</li>
-<li>Which  <code>python package</code> is needed? </li>
+<li>Which <code>python package</code> is needed? </li>
 </ul>
 
 </div>
@@ -13406,7 +13409,7 @@ Method:  {&#39;User-Agent&#39;: &#39;python-requests/2.23.0&#39;, &#39;Accept-En
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">response</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Text:&#39;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Text:&#39;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">[:</span><span class="mi">50</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Status_code:&#39;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;-----&#39;</span><span class="p">)</span>
@@ -13429,11 +13432,12 @@ Method:  {&#39;User-Agent&#39;: &#39;python-requests/2.23.0&#39;, &#39;Accept-En
 <div class="output_subarea output_stream output_stdout output_text">
 <pre> &lt;Response [200]&gt;
 -----
-Text: &lt;!DOCTYPE 
+Text: &lt;!DOCTYPE html&gt;
+&lt;html class=&#34;client-nojs&#34; lang=&#34;en
 -----
 Status_code: 200
 -----
-hHeaders: {&#39;Accept-Ranges&#39;: &#39;bytes&#39;, &#39;Age&#39;: &#39;614&#39;, &#39;Cache-Control&#39;: &#39;s-maxage=900, must-revalidate, max-age=0&#39;, &#39;Content-Encoding&#39;: &#39;gzip&#39;, &#39;Content-language&#39;: &#39;en&#39;, &#39;Content-Type&#39;: &#39;text/html; charset=UTF-8&#39;, &#39;Date&#39;: &#39;Tue, 02 Mar 2021 12:46:06 GMT&#39;, &#39;Last-Modified&#39;: &#39;Tue, 02 Mar 2021 12:20:51 GMT&#39;, &#39;Link&#39;: &#39;&lt;/wiki/skins/common/images/bplogo.png?e1b99&gt;;rel=preload;as=image&#39;, &#39;Server&#39;: &#39;Apache&#39;, &#39;Vary&#39;: &#39;Accept-Encoding,Cookie&#39;, &#39;Via&#39;: &#39;1.1 varnish&#39;, &#39;X-Cache&#39;: &#39;HIT&#39;, &#39;X-Cache-Expires&#39;: &#39;&#39;, &#39;X-Cacheable&#39;: &#39;YES&#39;, &#39;X-Content-Type-Options&#39;: &#39;nosniff&#39;, &#39;X-UA-Compatible&#39;: &#39;IE=Edge&#39;, &#39;X-Varnish&#39;: &#39;378068167 378036290&#39;, &#39;Content-Length&#39;: &#39;43107&#39;, &#39;Connection&#39;: &#39;keep-alive&#39;}
+hHeaders: {&#39;Accept-Ranges&#39;: &#39;bytes&#39;, &#39;Age&#39;: &#39;530&#39;, &#39;Cache-Control&#39;: &#39;s-maxage=900, must-revalidate, max-age=0&#39;, &#39;Content-Encoding&#39;: &#39;gzip&#39;, &#39;Content-language&#39;: &#39;en&#39;, &#39;Content-Type&#39;: &#39;text/html; charset=UTF-8&#39;, &#39;Date&#39;: &#39;Thu, 04 Mar 2021 15:30:48 GMT&#39;, &#39;Last-Modified&#39;: &#39;Thu, 04 Mar 2021 15:06:57 GMT&#39;, &#39;Link&#39;: &#39;&lt;/wiki/skins/common/images/bplogo.png?e1b99&gt;;rel=preload;as=image&#39;, &#39;Server&#39;: &#39;Apache&#39;, &#39;Vary&#39;: &#39;Accept-Encoding,Cookie&#39;, &#39;Via&#39;: &#39;1.1 varnish&#39;, &#39;X-Cache&#39;: &#39;HIT&#39;, &#39;X-Cache-Expires&#39;: &#39;&#39;, &#39;X-Cacheable&#39;: &#39;YES&#39;, &#39;X-Content-Type-Options&#39;: &#39;nosniff&#39;, &#39;X-UA-Compatible&#39;: &#39;IE=Edge&#39;, &#39;X-Varnish&#39;: &#39;1933158228 1933121453&#39;, &#39;Content-Length&#39;: &#39;43106&#39;, &#39;Connection&#39;: &#39;keep-alive&#39;}
 </pre>
 </div>
 </div>
@@ -13463,7 +13467,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Scraping-&amp;-Parsing-in-practice">Scraping &amp; Parsing in practice<a class="anchor-link" href="#Scraping-&amp;-Parsing-in-practice">&#182;</a></h2>
+<h2 id="Scraping-&amp;-Parsing-in-Practice">Scraping &amp; Parsing in Practice<a class="anchor-link" href="#Scraping-&amp;-Parsing-in-Practice">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -13695,6 +13699,50 @@ if your request was successful, if it’s missing data, if it’s missing creden
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">balance</span><span class="o">=</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;Leadership_and_partisan_balance&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">balance</span><span class="o">.</span><span class="n">prettify</span><span class="p">()[:</span><span class="mi">500</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;span class=&#34;mw-headline&#34; id=&#34;Leadership_and_partisan_balance&#34;&gt;
+ Leadership and partisan balance
+&lt;/span&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="alert alert-info">
+<h3> Your turn</h3>
+<p> Find the id & get the soup for the table entitled *List of current U.S. Senate members*. 
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">officeholder_table</span><span class="o">=</span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s1">&#39;officeholder-table&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">officeholder_table</span><span class="o">.</span><span class="n">prettify</span><span class="p">()[:</span><span class="mi">500</span><span class="p">])</span>
 </pre></div>
@@ -13755,7 +13803,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">thead</span><span class="o">=</span> <span class="n">officeholder_table</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;thead&#39;</span><span class="p">)</span>
@@ -13772,7 +13820,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -13798,7 +13846,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rows</span><span class="o">=</span><span class="n">officeholder_table</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span>
@@ -13815,7 +13863,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[11]:</div>
 
 
 
@@ -13839,7 +13887,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">row</span><span class="o">=</span><span class="n">rows</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
@@ -13853,7 +13901,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tds</span><span class="o">=</span><span class="n">row</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;td&#39;</span><span class="p">)</span>
@@ -13870,7 +13918,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[12]:</div>
+    <div class="prompt output_prompt">Out[13]:</div>
 
 
 
@@ -13890,7 +13938,7 @@ if your request was successful, if it’s missing data, if it’s missing creden
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">url</span><span class="o">=</span> <span class="n">tds</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
@@ -13938,7 +13986,7 @@ Text content Jerry Moran
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_url</span><span class="o">=</span><span class="p">[]</span>
@@ -13959,7 +14007,7 @@ Text content Jerry Moran
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -13993,7 +14041,7 @@ Text content Jerry Moran
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">NavigableString</span><span class="p">,</span> <span class="n">Tag</span>
@@ -14067,7 +14115,7 @@ Text content Jerry Moran
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_parsed</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -14083,7 +14131,7 @@ Text content Jerry Moran
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14304,7 +14352,7 @@ Text content Jerry Moran
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -14451,7 +14499,7 @@ Text content Jerry Moran
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14472,7 +14520,7 @@ Text content Jerry Moran
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14489,7 +14537,7 @@ Text content Jerry Moran
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.carbonintensity.org.uk&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span> 
@@ -14558,7 +14606,7 @@ to learn more about what endpoints are available</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get Carbon Intensity data for current half hour</span>
@@ -14590,23 +14638,23 @@ to learn more about what endpoints are available</li>
 <pre>--- text ---
 (&#39;{ \r\n&#39;
  &#39;  &#34;data&#34;:[{ \r\n&#39;
- &#39;    &#34;from&#34;: &#34;2021-03-02T12:00Z&#34;,\r\n&#39;
- &#39;    &#34;to&#34;: &#34;2021-03-02T12:30Z&#34;,\r\n&#39;
+ &#39;    &#34;from&#34;: &#34;2021-03-04T15:00Z&#34;,\r\n&#39;
+ &#39;    &#34;to&#34;: &#34;2021-03-04T15:30Z&#34;,\r\n&#39;
  &#39;    &#34;intensity&#34;: {\r\n&#39;
- &#39;      &#34;forecast&#34;: 286,\r\n&#39;
- &#39;      &#34;actual&#34;: 292,\r\n&#39;
+ &#39;      &#34;forecast&#34;: 270,\r\n&#39;
+ &#39;      &#34;actual&#34;: 267,\r\n&#39;
  &#39;      &#34;index&#34;: &#34;high&#34;\r\n&#39;
  &#39;    }\r\n&#39;
  &#39;  }]\r\n&#39;
  &#39;}&#39;)
 --- Content ---
-(b&#39;{ \r\n  &#34;data&#34;:[{ \r\n    &#34;from&#34;: &#34;2021-03-02T12:00Z&#34;,\r\n    &#34;to&#34;: &#34;2021-&#39;
- b&#39;03-02T12:30Z&#34;,\r\n    &#34;intensity&#34;: {\r\n      &#34;forecast&#34;: 286,\r\n      &#34;a&#39;
- b&#39;ctual&#34;: 292,\r\n      &#34;index&#34;: &#34;high&#34;\r\n    }\r\n  }]\r\n}&#39;)
+(b&#39;{ \r\n  &#34;data&#34;:[{ \r\n    &#34;from&#34;: &#34;2021-03-04T15:00Z&#34;,\r\n    &#34;to&#34;: &#34;2021-&#39;
+ b&#39;03-04T15:30Z&#34;,\r\n    &#34;intensity&#34;: {\r\n      &#34;forecast&#34;: 270,\r\n      &#34;a&#39;
+ b&#39;ctual&#34;: 267,\r\n      &#34;index&#34;: &#34;high&#34;\r\n    }\r\n  }]\r\n}&#39;)
 --- JSON---
-{&#39;data&#39;: [{&#39;from&#39;: &#39;2021-03-02T12:00Z&#39;,
-           &#39;intensity&#39;: {&#39;actual&#39;: 292, &#39;forecast&#39;: 286, &#39;index&#39;: &#39;high&#39;},
-           &#39;to&#39;: &#39;2021-03-02T12:30Z&#39;}]}
+{&#39;data&#39;: [{&#39;from&#39;: &#39;2021-03-04T15:00Z&#39;,
+           &#39;intensity&#39;: {&#39;actual&#39;: 267, &#39;forecast&#39;: 270, &#39;index&#39;: &#39;high&#39;},
+           &#39;to&#39;: &#39;2021-03-04T15:30Z&#39;}]}
 </pre>
 </div>
 </div>
@@ -14632,48 +14680,12 @@ to learn more about what endpoints are available</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># json objects work as do any other dictionary in Python</span>
 <span class="n">json</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 <span class="n">json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[21]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[{&#39;from&#39;: &#39;2021-03-02T12:00Z&#39;,
-  &#39;to&#39;: &#39;2021-03-02T12:30Z&#39;,
-  &#39;intensity&#39;: {&#39;forecast&#39;: 286, &#39;actual&#39;: 292, &#39;index&#39;: &#39;high&#39;}}]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get the actual intensity value:</span>
-<span class="n">json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;intensity&#39;</span><span class="p">][</span><span class="s1">&#39;actual&#39;</span><span class="p">]</span>
 </pre></div>
 
     </div>
@@ -14692,7 +14704,43 @@ to learn more about what endpoints are available</li>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>292</pre>
+<pre>[{&#39;from&#39;: &#39;2021-03-04T15:00Z&#39;,
+  &#39;to&#39;: &#39;2021-03-04T15:30Z&#39;,
+  &#39;intensity&#39;: {&#39;forecast&#39;: 270, &#39;actual&#39;: 267, &#39;index&#39;: &#39;high&#39;}}]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># get the actual intensity value:</span>
+<span class="n">json</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;intensity&#39;</span><span class="p">][</span><span class="s1">&#39;actual&#39;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[23]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>267</pre>
 </div>
 
 </div>
@@ -14718,7 +14766,7 @@ to learn more about what endpoints are available</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.carbonintensity.org.uk/intensity/factors&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{},</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">headers</span><span class="p">)</span>
@@ -14763,7 +14811,7 @@ to learn more about what endpoints are available</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get Carbon Intensity data for current half hour for GB regions</span>
@@ -14789,7 +14837,7 @@ to learn more about what endpoints are available</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># In the carbonintensity API, it works differently:</span>
@@ -14844,7 +14892,7 @@ to learn more about what endpoints are available</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">endpoint</span> <span class="o">=</span> <span class="s2">&quot;https://api.nasa.gov/mars-photos/api/v1/rovers/perseverance/photos&quot;</span>
@@ -14866,7 +14914,7 @@ to learn more about what endpoints are available</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[26]:</div>
+    <div class="prompt output_prompt">Out[27]:</div>
 
 
 
@@ -14891,7 +14939,7 @@ to learn more about what endpoints are available</li>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
@@ -14921,7 +14969,7 @@ to learn more about what endpoints are available</li>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[27]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14974,7 +15022,7 @@ to learn more about what endpoints are available</li>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Class-Survey">Class Survey<a class="anchor-link" href="#Class-Survey">&#182;</a></h2><p>Please fill in this <a href="https://forms.gle/WwFmwqdJZScN3ceL8">short survey</a> about the class.</p>
-
+<h2 id="Homework-on-webscraping-for-next-week">Homework on webscraping for next week<a class="anchor-link" href="#Homework-on-webscraping-for-next-week">&#182;</a></h2>
 </div>
 </div>
 </div>
