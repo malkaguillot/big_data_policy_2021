@@ -11,7 +11,7 @@
 
 
 <!-- .slide:  id="toc" class: left, inverse -->
-## Table of contents
+## Table of Contents
 
 1. [Prologue](#prologue)
 2. [Linear Regression](#linear)
@@ -38,7 +38,7 @@ Things to clarify:
 
 --
 
-## Coming back on the homework
+## Coming Back on the Homework
 
 Notes:
 
@@ -48,7 +48,7 @@ Notes:
 
 --
 
-### Last week
+### Last Week
 - Model accuracy
 
 ### Today
@@ -61,7 +61,7 @@ Reference:
 - Geron, chapter 2
 
 
-### Next week
+### Next Week
 - Classification (binary outcome)
 
 ---
@@ -129,14 +129,14 @@ $\Rightarrow$ Including polynomials in $X$ may provide a better fit
 --
 
 ## Linear Models: pros and cons
-- Pros:
+- [Pros]():
   - Interpretability
   - Good predictive performance
   - Accuracy measures for
       - coefficient estimates (standard errors and confidence intervals)
       - the model
 
-- Cons:
+- [Cons]():
   - When $p>n$
   - Tend to over-fit training data.
   - Cannot handle multicollinearity.
@@ -163,9 +163,9 @@ In much of the rest of the class, we discuss methods that expand the scope of li
 
 --
 
-## Why regularization?
+## Why Regularization?
 
-- Solution against over-fitting
+- Solution against <bcolor>over-fitting</bcolor>
 
 -  Allow High-Dimensional Predictors
   - $p>>n$: OLS no longer has a unique solution
@@ -190,11 +190,14 @@ Corollary of regularization:
 
 --
 
-## Different penalty functions $p()$
-- Ridge (L2): $p(\beta_j)=\beta_j^2$
-- LASSO (L1): $p(\beta_j)=|\beta_j|$
-- Elastic Net: $p(\beta_j)=\alpha |\beta_j| + (1-\alpha) \beta_j^2$
-- Subset selection: $p(\beta_j)=1\\{\beta_j\neq 0\\}$
+## Different Penalty Functions $p()$
+- <bcolor>Ridge (L2)</bcolor>: $p(\beta_j)=\beta_j^2$
+
+- <bcolor>LASSO (L1)</bcolor>: $p(\beta_j)=|\beta_j|$
+
+- <bcolor>Elastic Net</bcolor>: $p(\beta_j)=\alpha |\beta_j| + (1-\alpha) \beta_j^2$
+
+- <bcolor>Subset selection</bcolor>: $p(\beta_j)=1\\{\beta_j\neq 0\\}$
 
 Notes:
 - **Ridge**: shrinks coefficients toward zero and helps select between collinear predictors.
@@ -203,7 +206,7 @@ Notes:
 
 --
 
-## How to solve without a closed-form solution? Gradient Descent
+## How to Solve Without a Closed-form Solution? Gradient Descent
 <img data-src="images/gradient-descent.jpeg"  style="height: 400px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
 
 Gradient descent measures the local gradient of the error function, and then steps in that direction.
@@ -221,13 +224,13 @@ Notes:
 
 ## Stochastic Gradient Descent
 
-1. Picks a random instance in the training set
+1. Picks a <bcolor>random instance</bcolor> in the training set
 
 2. Computes the gradient only for that single instance
 
-- **Pro**: SGD is much faster to train,
+- [**Pro**](): SGD is much faster to train,
 
-- **Cons**: bounces around even after it is close to the minimum.
+- [**Cons**](): bounces around even after it is close to the minimum.
 
 $\rightarrow$ Compromise: <bcolor>mini-batch gradient descent</bcolor>, selects a sample of rows (a “mini-batch”) for gradient compute
 
@@ -238,7 +241,7 @@ Notes:
 
 --
 
-## Varients of Gradient Descent 
+## Varients of Gradient Descent
 <img data-src="images/gradient-descent-details.png"  style="height: 400px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
 
 
@@ -337,9 +340,9 @@ The minimization problem can be written as follow:
 
 Where
 - Ridge: $\sum_{j=1}^p \beta_j^2 <s $
-$\rightarrow$ equation of a circle
+$\rightarrow$ equation of a <bcolor>circle</bcolor>
 - Lasso: $\sum_{j=1}^p |\beta_j| <s $
-$\rightarrow$ equation of a diamond
+$\rightarrow$ equation of a <bcolor>diamond</bcolor>
 
 Notes:
 - Lasso:  we try to find the set of coefficient estimates that lead to the smallest RSS, subject to the constraint that there is a budgets for how large $\sum_{j=1}^p |\beta_j|$ can be.
@@ -383,7 +386,10 @@ $\lambda_1$, $\lambda_2$ $=$ strength of L1 (Lasso) penalty and L2 (Ridge) penal
 ## Evaluating Regression Models: $R^2$
 MSE is good for comparing regression models, but the units depend on the outcome variable and therefore are not interpretable
 
-Better to use $R^2$ in the test set, which has same ranking as MSE but it more interpretable.
+Better to use $R^2$ in the test set, which has same ranking as MSE but it <bcolor>more interpretable</bcolor>.
+
+Notes:
+$R^2$ proportion of the variance in the dependent variable that is predictable from the independent variable(s)
 
 ---
 
@@ -394,23 +400,23 @@ Better to use $R^2$ in the test set, which has same ranking as MSE but it more i
 --
 
 ## Selecting the Tuning Parameter By Cross-Validation
-1. Choose a grid of $\lambda$ values
-2. Compute the CV error for each lambda
+1. Choose a <bcolor>grid</bcolor> of $\lambda$ values
+2. Compute the <bcolor>CV error</bcolor> for each lambda
 3. Select the tuning parameter value for which the CV error is smallest
-4. Re-fit the model using all available observation and the best $\lambda$
+4. <bcolor>Re-fit</bcolor> the model using all available observation and the best $\lambda$
 
 
 --
 
 ## Data Prep for Machine Learning
-- See Geron Chapter 2 for `pandas` and `sklearn` syntax:
+- See Geron Chapter 2 for [pandas]() and [sklearn]() syntax:
   - imputing missing values.
-  - feature scaling (Coefficient size depends on the scaling)
-  - encoding categorical variables.
+  - feature <bcolor>scaling</bcolor> (coefficient size depends on the scaling)
+  - <bcolor>encoding</bcolor> categorical variables.
 
 - Best practice
-  - reproducible data pipeline
-  - standardize coefficients
+  - <bcolor>reproducible</bcolor> data pipeline
+  - <bcolor>standardize</bcolor> coefficients
 
 --
 
