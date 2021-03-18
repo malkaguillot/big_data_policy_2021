@@ -48,11 +48,11 @@ Reference:
 
 ## Unsupervised Learning
 
--   So far, supervised learning methods such as   regression
+-   So far, supervised learning methods such as  regression
 
 -   Unlike for supervised learning, there is no known goal
 
-    -   No labeled data,
+    -  <bcolor>No labeled data</bcolor>,
 
     -   Not a prediction exercise
 
@@ -68,14 +68,14 @@ Reference:
 
 ## Setting
 
--   Features $X_1, X_2, ... X_p $ measured on $n$ observations, but no associated labeled variable $Y$
+-   Features <bcolor>$X_1, X_2, ... X_p $</bcolor> measured on $n$ observations, but no associated labeled variable $Y$
 
 -   **Dimensionality reduction** methods are needed
   - ML pbs often involve thousands of features.
   - Especially in the case of **text data**,
   - Not just for computational tractability, but also to help find a good solution.
 
--   Can be use as a **descriptive tool**
+-   Can be use as a <bcolor>descriptive tool</bcolor>
   -   Can we extract information from the data and visualize it?
   -   Can we discover subgroups among the variables or among the observations?
 
@@ -87,7 +87,7 @@ find a low-dimensional representation of the data that captures as much of the i
 
 Dimensionality reduction reduces the number of dimensions (also called features and attributes) of a dataset.
 
-It is used to remove redundancy and help both data scientists and machines extract useful patterns.
+It is used to **remove redundancy** and help both data scientists and machines extract useful patterns.
 
 --
 
@@ -103,22 +103,17 @@ It is used to remove redundancy and help both data scientists and machines extra
 # Dimensionality Reduction
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
 
-
---
-
-<img data-src="images/ml-book/dim-1.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
-
 --
 
 ## Principal Component Analysis (PCA)
 
 -   Popular **dimension reduction** technique.
 
--   Identifies the axis that accounts for the **largest amount of variance** in the data.
+-   Identifies the axis that accounts for the <bcolor>largest amount of variance</bcolor> in the data.
 
 -   Finds a second axis, orthogonal to the first, that accounts for the  largest amount of the remaining variance, and so on
 
--   The unit vector defining the $i^{th}$ axis is called the $i^{th}$ principal component.
+-   The unit vector defining the $i^{th}$ axis is called the $i^{th}$ <bcolor>principal component</bcolor>.
 
 Notes:
 - History: old techniques from the 40s - mainly used in psychology
@@ -279,15 +274,15 @@ Notes:
 
 ## Choosing the number of dimensions
 
-There is no criteria for deciding how many principal components are required, but some rules of thumb:
+No criteria for deciding how many PC are required, but some <bcolor>rules of thumb</bcolor>:
 
--   Choose the smallest number of PC required to explain a **sizable amount** of the variation  in the data
+-   Choose the <bcolor>smallest number of PC required to explain a **sizable amount**</bcolor> of the variation  in the data
 
--   For dimensionality reduction
+-   For [dimensionality reduction]()
 
     -   Explaining 95% of the variance is a good objective
 
--   For data visualization:
+-   For [data visualization]():
 
     -   Focus on a small number of axis that you can interpret
 
@@ -335,16 +330,16 @@ Equivalent: simply <bcolor>transpose</bcolor> the data matrix
 --
 
 ## K-means clustering
-**Partitioning** the data into a pre-specified number ($k$) of clusters
+**Partitioning** the data into a <bcolor>pre-specified</bcolor> number ($k$) of clusters
 
 The partitioning corresponds to an **optimization problem** which consists in:
 
 -   partitioning the data into $k$ clusters of equal variance
 
 -   so that it minimizes the within-cluster sum-of-squares
-    [**inertia**]: $$\sum_{i=0}^k \min_{\mu_j}(||x_i-\mu_j||^2)$$
+    [<bcolor>inertia</bcolor>]: $$\sum_{i=0}^k \min_{\mu_j}(||x_i-\mu_j||^2)$$
 
--   Each cluster is represented by the **central vector** or centroïd
+-   Each cluster is represented by the **central vector** or <bcolor>centroïd</bcolor>
     $\mu_j$
 
 Notes:
@@ -372,28 +367,12 @@ Notes:
 
 --
 
-## K-means clustering
-
-
-<img data-src="images/blobs_diagram_6clusters.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
-
-6 clusters
-
-
---
-
-## K-means clustering
-
-
-<img data-src="images/voronoi_diagram.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
-Decision boundaries for 4 clusters
-
---
-
 ## K-means algorithm
 
 1.  <bcolor>Randomly assign a number</bcolor> ($1$ to $k$) to each of the
-    observations. $=$ initial cluster assignments
+    observations.
+
+    $=$ initial cluster assignments
 
 2.  <bcolor>Iterate until the cluster assignments stop changing</bcolor>:
 
@@ -417,11 +396,11 @@ Notes:
 
 Notes:
 1. the observations are shown.
-2. [Top center] Step 1of the algorithm, each observation is randomly assigned to a cluster.
-3. Step 2(a): The cluster centroids are computed.
-4. Step 2(b): each observation is assigned to the nearest centroid.
-5. Step 2(a) is once again performed, leading to new cluster centroids.
-6. the results obtained after ten iterations.
+2. [Top center] Step 1of the algorithm, **each observation is randomly assigned to a cluster**.
+3. *Step 2(a)* : The **cluster centroids are computed**.
+4. *Step 2(b)* : each observation is **assigned to the nearest centroid**.
+5. *Step 2(a)*  is once again performed, leading to new cluster centroids.
+6. the *results* obtained after 10 iterations.
 
 
 --
@@ -435,7 +414,7 @@ Notes:
 
 -   Because inertia decreases with the number of clusters
 
--   Rule of thumb: choose the number of clusters at the “elbow”
+-   <bcolor>Rule of thumb</bcolor>: choose the number of clusters at the “elbow”
 
 --
 
@@ -446,7 +425,7 @@ Notes:
 
 ## Finding the optimal number of clusters
 
--   Can pick the optimal number of clusters with the **silhouette score**:
+-   Can pick the optimal number of clusters with the <bcolor>silhouette score</bcolor>:
   $$\frac{b_i-a_i}{max(a_i, b_i)}$$
 
     -   $a_i$ mean distance to members of $i$’s cluster
@@ -455,24 +434,99 @@ Notes:
 
 <img data-src="images/silhouette_score_vs_k_diagram.png"  style="height: 280px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
 
+Notes:
+- $a_i=$ mean distance between $i$ and all other data points in the same cluster
+- the score measure of **how similar** an object is to its own cluster (**cohesion**) compared to other clusters (**separation**).
+- Scope: -1 to 1 (good clustering)
+- If most objects have a high value, then the clustering configuration is appropriate
+
+--
+
+## Hierarchical Clustering
+
+- Alternative to $k$-means
+
+- No pre-existing choice of $k$
+
+- Tree-based representation of the observation = <bcolor>dendogram</bcolor>
+
+- Methodology:
+    - <bcolor>agglomerative</bcolor> clustering (*bottom-up*)
+    - Euclidean distance
+
+
+--
+
+## Dendrogram
+
+<img data-src="images/jwht-fig10-9a.png"  style="height: 450px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+
+Notes:
+- *bottom*: leaf of the dendrogram = observations
+- *moving up the tree*: some leaves begin to fuse into branches
+- The earlier(lower in the tree) fusions occur, the more similar the groups of observations are to each other
+
+--
+
+## Hierarchical Clustering
+
+<img data-src="images/jwht-fig10-9.png"  style="height: 450px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+
+Notes:
+- *Left*: dendrogram obtained from hierarchically clustering the data
+- *Middle*: same dendrogram, cut at a height of 9 (dashed line) $\rightarrow$ 2 clusters
+- *Right*: same dendrogram, cut at a height of 5 (dashed line) $\rightarrow$ 3 clusters
+
+--
+
+## Identifying Clusters
+
+- One single dendrogram can be used to obtain any number of clusters
+
+- *Common practice*: select by eye a sensible number of clusters
+
+- <bcolor>Dissimilarity measure</bcolor> between each pair of observations
+  - E.g. Euclidean distance
+  - Concept extended to a pair of *groups of observations*
+    - *Commonly-used linkages*: Complete/single/average/centroïd
+
+--
+
+## Hierarchical Clustering Algorithm
+
+1. <bcolor>Bottom</bcolor>: each observation = 1 clusters
+   1. Measure pairwise dissimilarities
+   2. Fuse the most similar observations <bcolor>$\rightarrow n−1$ clusters</bcolor>
+
+2. For <bcolor>$i=n, n−1,\cdots ,2$</bcolor>:
+   - Examine all pairwise inter-cluster dissimilarities among their clusters and
+   - Identify the pair of clusters that are <bcolor>least dissimilar</bcolor> $\rightarrow$$ fuse them
+   - Compute the <bcolor>new pairwise</bcolor> inter-cluster dissimilarities among the $i−1$ remaining clusters
+
+
+--
+
+## Results Depend on the Type of Linkage
+<img data-src="images/jwht-fig10-12.png"  style="height: 450px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+
+Notes:
+Compute all pairwise dissimilarities between the observations in cluster A and in cluster B
+
+- *Complete*: Maximal intercluster dissimilarity.  **largest** of these dissimilarities
+- *Single*: Minimal intercluster dissimilarity. **smallest** of these dissimilarities
+- *average*: Mean intercluster dissimilarity. **Average** of these dissimilarities
+- *centroid*: Dissimilarity between the centroids
+
 --
 
 ## Other Clustering Algorithms
 
--   **DBSCAN **defines clusters as continuous regions of high density
+-   <bcolor>DBSCAN</bcolor> defines clusters as continuous regions of high density
 
     -   Works well if all the clusters are dense enough and if they are
         very well separated by low-density regions
 
     -   Detects and excludes outliers automatically
-
--   Agglomerative **hierarchical clustering** makes nested clusters:
-
-    -   we do not know in advance how many clusters we want
-
-    -   tree-like visual representation of the observations, called a dendrogram,
-
-    -   show at once the clusterings obtained for each possible number of clusters, from $1$ to $n$.
 
 
 --
