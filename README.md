@@ -18,7 +18,7 @@ Notebooks on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.o
 |3|Mar 4 |**Scraping and APIs**  | Notebook: [.ipynb](https://github.com/MalkIPP/big_data_policy_2021/blob/main/notebooks/w2-data-collection.ipynb), [html](https://malkipp.github.io/big_data_policy_2021/notebooks/w2-data-collection.html)|
 |4|Mar 11 |**Intro to ML: regressions**  | Slides in [html](https://malkipp.github.io/big_data_policy_2021/slides/2-regressions.html), [pdf](https://malkipp.github.io/big_data_policy_2021/slides/2-regressions.pdf); Notebook: [.ipynb](https://github.com/MalkIPP/big_data_policy_2021/blob/main/notebooks/w3-ML-regressions.ipynb), [html](https://malkipp.github.io/big_data_policy_2021/notebooks/w3-ML-regressions.html)|
 |5|Mar 18 |**Unsupervised learning**  | Slides in [html](https://malkipp.github.io/big_data_policy_2021/slides/3-unsupervised-learning.html), [pdf](); Notebook: [.ipynb](https://github.com/MalkIPP/big_data_policy_2021/blob/main/notebooks/w4-unsupervised-learning.ipynb), [html]()|
-|6|Mar 25 |**Classification**  | Slides in [html](), [pdf](); Notebook: [.ipynb](), [html]()|
+|6|Mar 25 |**Classification**  | Slides in [html](https://malkipp.github.io/big_data_policy_2021/slides/4-classification.html), [pdf](); Notebook: [.ipynb](), [html]()|
 |7|Apr 1 |**[NLP1] Text analysis essentials**  | Slides in [html](), [pdf]()|
 |8|Apr 15 |**[NLP2]**  | Slides in [html](), [pdf]()|
 |9|Apr 15 |**Text analysis**  |  Notebook: [.ipynb](), [html]()|
