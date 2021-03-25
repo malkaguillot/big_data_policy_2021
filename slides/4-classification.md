@@ -104,42 +104,6 @@ Reference:
 
 --
 
-
-## Predicting corruption based on public finance account>
-
-**Ash, Galetta and Giommoni (2020) A Machine Learning Approach to Analyzing Corruption in Local Public Finances.**
-
--   Predict corruption from budget accounts in Brazilian municipalities that have been audited for corruption
-
-    -   train set: Using an innovative anticorruption program: **audit
-        lotteries**
-
-    -   Features: local public finance data
-
-    -   Gradient boosting algorithm: Test-set accuracy of 75%, much better than guessing (58%) and predictions from OLS (59%)
-
--   Used to evaluate the dynamic (and spillover) effects of audits
-
-$\rightarrow$  inputs to policy decisions about corruption
-
---
-
-## Predicting corruption based on public finance account
-
-<img data-src="images/REG_PLOT_FTTF.png"  style="height: 350px; position:relative;background-color:white;   margin-left: auto;margin-right: auto;display: block" >
-
-Notes. Binscatter diagram of average true corruption (vertical axis) against binned predicted corruption (horizontal axis).
-
---
-
-## Applying to Full Dataset
-
-Take model trained on audited municipality-terms and predict probability of corruption in all municipalities and all years
-
-[fig:map] Actual Prediction
-
---
-
 ## Why not fitting a linear regression?
 
 -   **Technically possible** to fit a linear model using a categorical
