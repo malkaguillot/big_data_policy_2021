@@ -41,10 +41,10 @@ Notes:
 - Classification (binary outcome)
 
 Reference:
-- [JWHT](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/6009dd9fa7bc363aa822d2c7/1611259312432/ISLR+Seventh+Printing.pdf): chap 4
+- [JWHT](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/6009dd9fa7bc363aa822d2c7/1611259312432/ISLR+Seventh+Printing.pdf): chap 2.2.3, 4
 
 ### Next Week
-- Text data
+- Text data [Elliott Ash ]
 
 ---
 
@@ -126,7 +126,7 @@ $\rightarrow$  inputs to policy decisions about corruption
 
 ## Predicting corruption based on public finance account
 
-<img data-src="images/REG_PLOT_FTTF.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+<img data-src="images/REG_PLOT_FTTF.png"  style="height: 350px; position:relative;background-color:white;   margin-left: auto;margin-right: auto;display: block" >
 
 Notes. Binscatter diagram of average true corruption (vertical axis) against binned predicted corruption (horizontal axis).
 
@@ -159,6 +159,8 @@ $\rightarrow$  If the response variable was coded differently, the results could
     -   But prediction may lie outside of $[0, 1]$: hard to interpret
         them in terms of probabilities
 
+Notes:
+
 --
 
 ## Example
@@ -173,7 +175,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
 -   based on their characteristics $X$ (gender, wage, contract duration,
     experience, age...)
 
-<img data-src="images/logistic-vs-linear.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+<img data-src="images/logistic-vs-linear.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
 
 
 --
@@ -187,7 +189,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
     observation.
 
     -   For example, we can assign the class yes for all observations
-        where $P(y = 1 | x) > 0 $
+        where $P(y = 1 | x) > 0.5 $
 
     -   But we can also select a different **threshold**.
 
@@ -203,8 +205,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 ## Confusion Matrix
 
-- For comparing the predictions of the fitted model to the actual
-    classes.
+- For comparing the predictions of the fitted model to the actual classes.
 
 - After applying a classifier to a data set with known labels *Yes* and *No*:
 
@@ -226,13 +227,13 @@ $\rightarrow$  If the response variable was coded differently, the results could
   <tr>
     <td rowspan="2">True class</td>
     <td>no</td>
-    <td>TN</td>
-    <td>FP</td>
+    <td style="color:#90EE90;">TN</td>
+    <td style="color:orange;">FP</td>
   </tr>
   <tr>
     <td>yes</td>
-    <td>FN</td>
-    <td>TP</td>
+    <td style="color:yellow;">FN</td>
+    <td style="color:green;">TP</td>
   </tr>
 </tbody>
 </table>
@@ -242,19 +243,19 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 ## Precision and Recall
 
--   Precision
+-   <bcolor>Precision</bcolor>
 
     -   accuracy of positive predictions.
 
-    -   $\frac{\text{True Positives}}{\text{True Positives + False Positives}} $
+    -   $  \frac{{\color{green}{\text{True Positives}}}}{{\color{green}{\text{True Positives}}} +  {\color{orange}{\text{False Positives}}}}$
 
     -   decreases with false positives.
 
--   Recall
+-   <bcolor>Recall</bcolor>
 
     -   true positive rate.
 
-    -   $\frac{\text{True Positives}}{\text{True Positives + False Negatives}} $
+    -   $  \frac{{\color{green}{\text{True Positives}}}}{{\color{green}{\text{True Positives}}} +  {\color{yellow}{\text{False Negatives}}}}$
 
     -   decreases with false negatives.
 
@@ -263,8 +264,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 ## F1 Score
 
--   The $F_{1}$ score provides a single combined metric it is the
-    **harmonic mean** of precision and recall
+-   The $F_{1}$ score provides a single combined metric it is the **harmonic mean** of precision and recall
 
     $$\begin{aligned}
     F_{1} &= \frac{2}{\frac{1}{\text{precision}}+\frac{1}{\text{recall}}}
@@ -278,29 +278,33 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 --
 
-## The Precision/Recall Tradeoff
+## The Precision/Recall Trade-off
 
--   $F_1$ favors classifiers with similar precision and recall, but
-    sometimes you want **asymmetry**:
+- $F_1$ favors classifiers with similar precision and recall,
+- but sometimes you want **asymmetry**:
 
--   low recall + high precisions is better:
+1.   <bcolor>low recall + high precision is better</bcolor>
 
-    -   e.g. **deciding “guilty” in court**, you might prefer a model
-        that
-
+    -   e.g. **deciding “guilty” in court**, you might prefer a model that
     -   lets many actual-guilty go free (high false negatives
         $\leftrightarrow$ low recall)...
-
     -   ... but has very few actual-innocent put in jail (low false
         positives $\leftrightarrow$ high precision
 
--   high recall + low precisions is better:
+2.   <bcolor>high recall + low precision is better</bcolor>
+
+--
+
+## The Precision/Recall Trade-off
+- $F_1$ favors classifiers with similar precision and recall,
+- but sometimes you want **asymmetry**:
+
+1.   <bcolor>low recall + high precision is better</bcolor>
+2.   <bcolor>high recall + low precision is better</bcolor>
 
     -   e.g classifier to **detect bombs during flight screening**, you
         might prefer a model that:
-
     -   has many false alarms (low precision)...
-
     -   ... to minimize the number of misses (high recall).
 
 
@@ -308,29 +312,30 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 ## ROC Curve and AUC
 
--   Plots *true positive rate* (recall) against the *false positive
-    rate* ($\frac{FP}{FP + TN}$):
+-   Plots *true positive rate* (recall) against the *false positive rate* ($\frac{FP}{FP + TN}$):
 
-<img data-src="images/roc-curve.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+<img data-src="images/roc-curve.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
 
+Notes:
+- ROC= "receiver operating characteristics"
+- The ROC curve is a popular graphic for simultaneously displaying the ROC curve 2 types of errors for classification problems at various threshold settings
+- It tells how much the model is capable of distinguishing between classes.
+- An ideal ROC curve will hug the top left corner, so the larger area under the (ROC) curve the AUC the better the classifier
 
 --
 
 ## ROC Curve and AUC
 
--   The area under the ROC curve (AUC) is a popular metric ranging
-    between:
+-   The area under the ROC curve (AUC) is a popular metric ranging between:
 
     -   0.5
 
         -   **random classification**
-
         -   ROC curve $=$ first diagonal
 
     -   and 1
 
         -   **perfect classification**
-
         -   $=$ area of the square
 
     -   better classifier $\rightarrow$ ROC curve toward the top-left
@@ -345,7 +350,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
 # Binary Classifier
 <html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
 
-- logistic regressions
+- Logistic Regressions
 - K-Nearest Neighbors
 - Support Vector Machine
 
@@ -355,8 +360,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
 ## Logistic Regression
 
 
--   Like OLS, logistic “regression” computes a weighted sum of the input
-    features to predict the output.
+-   Like OLS, logistic “regression” computes a weighted sum of the input features to predict the output.
 
     -   But it transforms the sum using the **logistic function**.
         $$\hat{p}=\Pr(Y_{i}=1)=\sigma(\theta'x)$$ where
@@ -367,7 +371,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 ## Logistic Regression
 
-  <img data-src="images/ml-book/sigmoid.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+  <img data-src="images/ml-book/sigmoid.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
 
 -   Prediction:
   $$\hat{y} = \\{
@@ -382,7 +386,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
 ## Logistic Regression Cost Function
 
 -   The cost function to minimize is
-<img data-src="images/log-reg-cost-function.png"  style="height: 130px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+<img data-src="images/log-reg-cost-function.png"  style="height: 130px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
 
   -   this does not have a closed form solution
 
@@ -398,8 +402,7 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 ## Naive Bayes Classifier
 
--   Relies on the observed conditional probabilities (and the Bayes
-    theorem)
+-   Relies on the observed conditional probabilities (and the Bayes theorem)
 
 -   For a 2-class problem for a given observation $X=x_0$:
 
@@ -409,24 +412,93 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 -   Relies on the independence assumption
 
+Notes:
+- It is possible to show that the test error rate is minimized, on average, by a very simple classifier
+  - assigns each observation to the most likely class, given its predictor values.
+  - we should simply assign a test observation with predictor vectorx0to the class $j$ for which the proba is the largest
+- Based on the conditional probabilities
+
+
+--
+
+## Naive Bayes Classifier
+<img data-src="images/jwht-fig2-13.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
+
+Notes:
+- simulated data set consisting of 100observations in each of two groups, indicated in blue and in orange.
+- The purple dashed line represents the Bayes decision boundary.
+- The orange background grid indicates the region in which a test observation will be assigned to the orange class, and
+- the blue background grid indicates the region in which a test observation will be assigned to the blue class.
+
 --
 
 ## K-Nearest Neighbors
 
--   With real data, we do not know the conditional distribution of Y
-    given X.
+-   With real data, we do not know the conditional distribution of Y  given X.
 
 -   computing the Bayes classifier is not possible.
 
--   The K-nearest neighbors (KNN) classifier estimates the conditional
-    distribution of Y given X.
+-   The K-nearest neighbors (KNN) classifier estimates the conditional distribution of Y given X.
 
--   Approximate Bayes decision rule in a subset of data around the
-    testing point
+-   Approximate Bayes decision rule in a subset of data around the testing point
 
--   **Non-parametric method** often successful in classification
-    situations where the **decision boundary is very irregular**
+-   **Non-parametric method** often successful in classification situations where the **decision boundary is very irregular**
 
+Notes:
+- the Bayes classifier serves as an unattainable gold standard against which to compare other methods
+
+
+--
+
+## K-Nearest Neighbors
+
+For $K$ and a test observation $x_0$
+1. KNN classifier first identifies the $K$ points in the training data that are closest to $x_0$ (i.e $N_0$)
+2. estimates the conditional probability for class $j$ as the fraction of points in $N_0$ whose response values equal $j$:
+
+$$ P(Y=j|X=x_O) = \frac{1}{K}\sum_{i \in N_O} I (y_i=j)$$
+
+3. applies Bayes rule and classifies the test observationx0tothe class with the largest probability
+
+
+--
+
+## KNN: illustration
+
+<img data-src="images/jwht-fig2-14.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
+
+- Assume $K=3$
+- Left: small training data set consisting of 6 blue and 6 orange observations
+- Right: KNN approach at of the possible values for $X_1$ and $X_2$, and  corresponding KNN decision boundary
+
+Notes:
+- goal is to make a prediction for the point labeled by the black cross
+1. KNN finds the 3 observations that are closest to the cross
+2. neighborhood is 1/3 orange & 2/3 blue $\rightarrow$ the cross belongs to the blue class
+
+
+--
+
+## KNN: illustration
+
+<img data-src="images/jwht-fig2-15.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
+
+- black curve: KNN decision boundary
+- dashed line: Bayes decision boundary
+
+Notes:
+- KNN can often produce classifiers that are surprisingly close to the optimal Bayes classifier
+
+--
+
+## KNN: choice of $K$
+
+<img data-src="images/jwht-fig2-17.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
+
+- $K=1$,the KNN training error rate is $0$, but the test error rate may be quite high
+
+Notes:
+- with more flexible classification methods, the training error rate will decline but the test error rate may not
 
 --
 
@@ -440,85 +512,126 @@ $\rightarrow$  If the response variable was coded differently, the results could
 
 -   Core idea: hyperplane that separates the data as well as possible,   while allowing some violations to this separation
 
+Notes:
+- an approach for classification that was developed in the computer science community in the 1990s
+-
+
 --
 
 ### Support Vector Machine: context and concepts
 
--   Pieces of the puzzle:
+-   [Pieces of the puzzle]():
 
-    1.  A **maximal margin classifier**: requires that classes be
+    1.  A <bcolor>maximal margin classifier</bcolor>: requires that classes be
         separable by a linear boundary.
 
-    2.  A **support vector classifier**: extension of the maximal margin
-        classifier.
+    2.  A <bcolor>support vector classifier</bcolor>: extension of the maximal margin classifier.
 
-    3.  **Support vector machine**: further extension to accommodate
-        non-linear class boundaries.
+    3.  <bcolor>Support vector machine</bcolor>: further extension to accommodate  non-linear class boundaries.
 
 -   For binary classification, can be extended to multiple classes
 
+Notes:
+- People often loosely refer to the **maximal margin classifier**, the **support vector classifier**, and the support vector machine as **“support vector machines”**.
+
 --
 
-## Classification and hyperplane
+## Classification and Hyperplane
 
-A perfectly separating linear hyperplan for a binary outcome<img data-src="images/svm1.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+A perfectly separating linear hyperplan for a binary outcome<img data-src="images/svm1.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
 
 There are an infinity of such separating hyperplan\
 $\rightarrow$ we need to choose one
 
+Notes:
+- If a separating hyperplane exists, we can use it to construct a very natural classifier:
+    - a test observation is assigned a class depending on which side of the hyperplane it is located
+- but then if there exists 1 separating hyperplan, there exist an infinity
+
 --
 
-## Maximum margin
+## Maximum Margin
 
 Maximum margin classifier for a perfectly separable binary
-outcome variable  <img data-src="images/svm2.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+outcome variable  <img data-src="images/svm2.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
 
+<bcolor>Criterium for optimal choice</bcolor>: the separating hyperplane for which the margin is the farthest from the observations\
+i.e., to select the <bcolor>maximal margin hyperplane</bcolor>
 
-**Criterium for optimal choice**: the separating hyperplane for which
-the the margin is the farthest from the observations,\
-i.e., to select the **maximal margin hyperplane**
+Notes:
+- **Methodo**:  
+  - compute the (perpendicular) distance from each training observation to a given separating hyperplane;
+  - the smallest such distance is the minimal distance from the observations to the hyperplane $=$ the *margin*
+- We can then classify a test observation based on which side of the maximal margin hyperplane it lies.
+- This is known as the maximal margin classifier.
+- On the figure:
+  - 3 training observations are equidistant from the max maring hyperplane = **support vector**
+
 
 --
 
-## Support vector
+## Support Vector
 
-**Support vector** = the 3 observations from the training set that are
+<bcolor>Support vector</bcolor> = the 3 observations from the training set that are
 equidistant from the maximal margin hyperplane
 
 $\rightarrow$ they “support” the maximal margin hyperplane (if they
 move, the the maximal margin hyperplane also moves)
 
-
 --
 
 ## Overcoming the perfectly separable hyperplan assumption
 
- We allow some number of observations to violate the
-rules so that they can lie on the wrong side of the margin boundaries.
+ We allow some number of observations to violate the rules so that they can lie on the wrong side of the margin boundaries.
 
 $\rightarrow$ find a hyperplane that almost separates the classes
 
-The **support vector classifier** generalizes the maximum margin classifier to the non-separable case.
+The <bcolor>support vector classifier</bcolor> generalizes the maximum margin classifier to the non-separable case.
 
 --
 
-## Support vector classifiers
+## Support Vector Classifiers
 
 Maximal margin classifier (left) and support vector classifier
-(right) <img data-src="images/svm3.png"  style="height: 350px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+(right) <img data-src="images/svm3.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
+
+Notes:
+- **pb** of Maximal margin hyperplan: only perfect classification, by essence overfits the training dataset
+- **Advantages** of SVC (vs MMH):
+  - Greater robustness to individual observations
+  - Better classification of most of the training observations
+
+--
+
+## Support Vector Classifiers: Details
+
+- A <bcolor>tuning parameter</bcolor> $C$ determines the severity of the violation ot the margin that the model tolerates
+  - chosen by cross Validation
+  - controls the bias-variance trade-off
+
+- $C$ small $\rightarrow$ narrow margins, rarely violated
+- $C$ large $\rightarrow$ wide margins, allow more violation
+  - More bias classifier, but lower variance
+
+--
+
+## Shortcomings of the linearity assumption:
+<img data-src="images/jwht-fig9-8.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
+
+Notes:
+- **Left**:The observations fall into two classes, with a non-linear boundary between them.
+- **Right**:The support vector classifier seeks a linear boundary, and consequently performs very poorly
+
 
 --
 
 ## Overcoming the linearity assumption:
 ### Support vector machines
 
--  Idea 1: (polynomial) transformation of the features + `StandardScaler` +
-    `LinearSVC`.
+-  *Idea 1*: (polynomial) transformation of the features + `StandardScaler` + `LinearSVC`.
 
-- Idea 2:  convert a linear classifier into a classifier that produced
-    **non-linear decision boundaries**.
-
-$\rightarrow$  using a Kernel such as:
+- *Idea 2*:  convert a linear classifier into a classifier that produced <bcolor>non-linear decision boundaries</bcolor>.
+$\rightarrow$  using a <bcolor>Kernel</bcolor> such as:
 
     - Gaussian RBF kernel
     - Polynomial kernel
@@ -526,8 +639,20 @@ $\rightarrow$  using a Kernel such as:
 -   **We do not open the kernel box**.
 
     -   Just think as them as a way to construct non-linear hyperplans
-
     -   Try out different kernel and distance specification
+
+Notes:
+- The kernel approach is computationally efficient
+- A kernel is a function that quantifies the similarity of 2 observations.
+
+--
+
+## Support vector machines
+<img data-src="images/jwht-fig9-9.png"  style="height: 350px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
+
+- *Left*: polynomial kernel of degree 3;
+- *Right*: radial kernel
+
 
 ---
 
@@ -647,7 +772,7 @@ $$\hat p_{k}(x_{i})=\Pr(Y_{i}=k)=\frac{\exp(s_{k}(x_{i}))}{\sum_{j=1}^{K}\exp(s_
 
 -   The binary cost function generalizes to the cross entropy
 
-<img data-src="images/multi-logit-cost-function.png"  style="height: 110px; position:relative;     margin-left: auto;margin-right: auto;display: block" >
+<img data-src="images/multi-logit-cost-function.png"  style="height: 110px; position:relative;background-color:white;     margin-left: auto;margin-right: auto;display: block" >
 
 -   again, this is convex, so gradient descent will find the global minimum.
 
