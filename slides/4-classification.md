@@ -211,7 +211,7 @@ Notes:
 
     -   accuracy of positive predictions.
 
-    -   $  \frac{{\color{green}{\text{True Positives}}}}{{\color{green}{\text{True Positives}}} +  {\color{orange}{\text{False Positives}}}}$
+    -   $  \frac{ \color{green}{\text{True Positives}}} {\color{green}{\text{True Positives}} +  \color{orange}{\text{False Positives}}}$
 
     -   decreases with false positives.
 
@@ -219,7 +219,7 @@ Notes:
 
     -   true positive rate.
 
-    -   $  \frac{{\color{green}{\text{True Positives}}}}{{\color{green}{\text{True Positives}}} +  {\color{yellow}{\text{False Negatives}}}}$
+    -   $  \frac{\color{green}{\text{True Positives}}}{\color{green}{\text{True Positives}} +  \color{yellow}{\text{False Negatives}}}$
 
     -   decreases with false negatives.
 
