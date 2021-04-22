@@ -42,7 +42,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
     --text-align: left;
 
   }
-  
+
+  :-moz-selection {
+      background: #FF0099;
+      color: #EEE;
+      text-shadow: none;
+  }
 .reveal {
   font-family: "Fira Sans";
   font-size: 30px;
@@ -146,20 +151,26 @@ div.text_cell_render.rendered_html {
 /*********************************************
  * LINKS
  *********************************************/
-.reveal a {
-  color: #e7ad52;
+.reveal a:link, a:visited {
+  color: #EB811B;
   text-decoration: none;
-  transition: color .15s ease; }
+  padding: 15px 25px;
+}
 
-.reveal a:hover {
-  color: #e7ad52;
+.reveal a:hover, a:active {
+  color: #EB811B;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
-  color: #e7ad52;
-  background: #d08a1d; }
+  color: #EB811B;
+  background: #EB811B; }
 
+  .rise-enabled .reveal .slides a
+  {
+
+     color: orange;
+  }
 /* RISE */
 .rise-enabled {
     background-color: #142328 !important;
