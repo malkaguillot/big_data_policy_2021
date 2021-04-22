@@ -21,7 +21,7 @@ Notebooks on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.o
 |6|Mar 25 |**Classification**  | Slides in [html](https://malkipp.github.io/big_data_policy_2021/slides/4-classification.html), [pdf](); Notebook: [.ipynb](https://github.com/MalkIPP/big_data_policy_2021/blob/main/notebooks/w5-ML-classification.ipynb), [html]()|
 |7|Apr 1 |**[NLP] Text analysis essentials**  | Slides in [pdf](https://raw.githubusercontent.com/MalkIPP/big_data_policy_2021/main/slides/5-text.pdf)|
 |9|Apr 15 |**Text analysis**  |  Notebook: [.ipynb](https://github.com/MalkIPP/big_data_policy_2021/blob/main/notebooks/w7-text-data.ipynb)|
-|10|Apr 22 |**Advanced ML**  | Slides in [html](), [pdf](); Notebook: [.ipynb](), [html]()|
+|10|Apr 22 |**Advanced ML**  | Notebook: [.ipynb](https://github.com/MalkIPP/big_data_policy_2021/blob/main/notebooks/w8-advanced-ML.ipynb)|
 |11|Apr 29 |**Research design**  | Slides in [html](), [pdf](); |
 |12|Apr 29 |**Developing a Dash application**  |  Notebook: [.ipynb](), [html]()|
 |13|May 6 |**Heterogeneous treatment effect**  | Slides in [html](), [pdf]()|
