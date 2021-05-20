@@ -25,6 +25,6 @@ Notebooks on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.o
 |11|Apr 29 |**Research design**  | Slides in [pdf](https://raw.githubusercontent.com/MalkIPP/big_data_policy_2021/main/slides/8_research-design.pdf); |
 |12|Apr 29 |**Developing a Dash application**  |  Notebook: [.ipynb](https://github.com/MalkIPP/big_data_policy_2021/blob/main/notebooks/w9-dash-application.ipynb))|
 |13|May 6 |**The Limitations of ML**     | Slides in [pdf](https://github.com/MalkIPP/big_data_policy_2021/blob/main/slides/9-AI-Policy.pdf)|
-|14|May 20 |**Heterogeneous treatment effect**  | Slides in [html](), [pdf]()|
+|14|May 20 |**Heterogeneous treatment effect**  | Slides in [pdf](https://github.com/MalkIPP/big_data_policy_2021/blob/main/slides/10_ML-Causal-Inference.pdf)|
 |15|May 27 |**Advanced causal methods**   | Notebook: [.ipynb](), [html]()|
 --------------------
