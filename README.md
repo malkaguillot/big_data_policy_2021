@@ -11,7 +11,7 @@ Notebooks on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.o
 --------------------
 
 | N° | Date | Lecture | Materials |
-|---|---|---|---|
+| :-------------: | :-------------: | :-------------: | ------------- |
 | 0 | Feb 25 | **Class overview** | Slides in [html](https://malkipp.github.io/big_data_policy_2021/slides/0_overview.html), [pdf](https://raw.githubusercontent.com/MalkIPP/big_data_policy_2021/main/slides/0_overview.pdf) |
 | 1 | Feb 25 | **Statistical Learning** [part 1] | Slides in [html](https://malkipp.github.io/big_data_policy_2021/slides/1-statistical-learning-part1.html), [pdf](https://raw.githubusercontent.com/MalkIPP/big_data_policy_2021/main/slides/1-statistical-learning-part1.pdf) |
 | 2 | Mar 4 | **Statistical Learning** [part 2] | Slides in [html](https://malkipp.github.io/big_data_policy_2021/slides/1-statistical-learning-part2.html), [pdf](https://raw.githubusercontent.com/MalkIPP/big_data_policy_2021/main/slides/1-statistical-learning-part2.pdf) |
